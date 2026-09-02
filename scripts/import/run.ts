@@ -100,6 +100,11 @@ async function main(): Promise<void> {
   console.log(`Itens (receitas): ${cdragon.items.length}`);
   console.log(`Campeões: ${cdragon.champions.length} · Traits: ${cdragon.traits.length}`);
   console.log(`Comps: ${comps.length}`);
+  if (comps.length > 0) {
+    const top = comps[0];
+    const carry = top.units.find((u) => u.role === 'carry');
+    console.log(`  ex.: "${top.name}" · avg ${top.avgPlacement ?? '?'} · carry ${carry?.championId ?? '?'} (${carry?.items?.length ?? 0} itens)`);
+  }
   if (unmatched.units.length || unmatched.items.length) {
     console.log(`Não casaram → unidades: ${unmatched.units.length}, itens: ${unmatched.items.length}`);
     if (unmatched.units.length) console.log(`  unidades: ${unmatched.units.slice(0, 20).join(', ')}`);

@@ -1,17 +1,32 @@
 {
-  "cluster_details": [
-    {
-      "Cluster": 1,
-      "name_string": "Blossom Ahri",
-      "units": [
-        { "apiName": "TFT18_Ahri", "items": ["Giant Slayer", "Infinity Edge", "Nonexistent Item"] },
-        { "apiName": "TFT18_Garen", "items": [] }
-      ]
-    },
-    {
-      "Cluster": 2,
-      "name_string": "Mystery Comp",
-      "units": [{ "apiName": "TFT18_Unknown", "items": [] }]
+  "results": {
+    "data": {
+      "cluster_details": {
+        "1": {
+          "Cluster": 1,
+          "name_string": "Blossom Ahri",
+          "name": [
+            { "name": "DA_18_Blossom", "type": "trait", "score": 1.5 },
+            { "name": "DA_18_Ahri", "type": "unit", "score": 4.0 }
+          ],
+          "stars": ["DA_18_Ahri", "DA_18_Garen", "DA_18_Unknown"],
+          "builds": [
+            {
+              "unit": "DA_18_Ahri",
+              "buildName": ["DA_GiantSlayer", "DA_InfinityEdge", "DA_18_EmblemFae"],
+              "num_items": 3,
+              "count": 100
+            }
+          ]
+        },
+        "2": {
+          "Cluster": 2,
+          "name_string": "Mystery",
+          "name": [],
+          "stars": ["DA_18_Unknown"],
+          "builds": []
+        }
+      }
     }
-  ]
+  }
 }
