@@ -76,19 +76,18 @@ export function parseCommunityDragon(json: unknown): CDragonResult {
     sameNumber.slice().sort((a, b) => (b.champions?.length ?? 0) - (a.champions?.length ?? 0))[0] ??
     data.sets?.[String(setNumber)];
 
-  // Campeões REAIS do set têm apiName com prefixo "TFT<n>_" (ex. TFT18_Ahri).
-  // Isso exclui summons/monstros/tokens (ex. TFT_BlueGolem) que vêm no mesmo set.
-  const prefix = `TFT${setNumber}_`;
+  // Campeões REAIS do set têm custo 1..5 E pelo menos 1 trait. Isso exclui
+  // summons/monstros/tokens (ex. TFT_BlueGolem, que vem com traits: []).
   const champions: Champion[] = [];
   for (const raw of canonical?.champions ?? []) {
     if (!raw.apiName || !raw.name || typeof raw.cost !== 'number') continue;
     if (raw.cost < 1 || raw.cost > 5) continue;
-    if (!raw.apiName.startsWith(prefix)) continue;
+    if (!Array.isArray(raw.traits) || raw.traits.length === 0) continue;
     champions.push({
       id: raw.apiName,
       name: raw.name,
       cost: raw.cost as 1 | 2 | 3 | 4 | 5,
-      traits: Array.isArray(raw.traits) ? raw.traits : [],
+      traits: raw.traits,
     });
   }
 
