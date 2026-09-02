@@ -34,6 +34,7 @@ interface RawTrait {
 interface RawSet {
   number?: number;
   name?: string;
+  mutator?: string;
   champions?: RawChampion[];
   traits?: RawTrait[];
 }
@@ -42,6 +43,8 @@ interface RawCDragon {
   setData?: RawSet[];
   sets?: Record<string, RawSet>;
 }
+
+const isJunkName = (n?: string): boolean => !n || /^set\s*\d+$/i.test(n.trim());
 
 export function parseCommunityDragon(json: unknown): CDragonResult {
   const data = (json ?? {}) as RawCDragon;
@@ -56,17 +59,31 @@ export function parseCommunityDragon(json: unknown): CDragonResult {
     items.push({ id: raw.apiName, name: raw.name, composition: [c[0], c[1]] as [ComponentId, ComponentId] });
   }
 
-  // Set atual = maior "number" disponível (em setData[] ou sets{}).
-  const sets: RawSet[] = data.setData ?? (data.sets ? Object.values(data.sets) : []);
-  const current = sets.reduce<RawSet | undefined>((best, s) => {
-    if (typeof s.number !== 'number') return best;
-    return !best || (best.number ?? -1) < s.number ? s : best;
-  }, undefined);
+  // Set atual = maior "number" (setData tem MUITAS entradas: variantes _PVEMODE,
+  // _TURBO, _PAIRS, eventos… todas com o mesmo number). Escolhemos a canônica
+  // (mutator exatamente "TFTSet<n>"); senão a de mais campeões.
+  const setData = data.setData ?? [];
+  const numbersInSets = Object.keys(data.sets ?? {}).map(Number).filter((n) => !Number.isNaN(n));
+  const setNumber = Math.max(
+    0,
+    ...setData.map((s) => s.number ?? 0),
+    ...numbersInSets,
+  );
 
+  const sameNumber = setData.filter((s) => s.number === setNumber);
+  const canonical: RawSet | undefined =
+    sameNumber.find((s) => s.mutator === `TFTSet${setNumber}`) ??
+    sameNumber.slice().sort((a, b) => (b.champions?.length ?? 0) - (a.champions?.length ?? 0))[0] ??
+    data.sets?.[String(setNumber)];
+
+  // Campeões REAIS do set têm apiName com prefixo "TFT<n>_" (ex. TFT18_Ahri).
+  // Isso exclui summons/monstros/tokens (ex. TFT_BlueGolem) que vêm no mesmo set.
+  const prefix = `TFT${setNumber}_`;
   const champions: Champion[] = [];
-  for (const raw of current?.champions ?? []) {
+  for (const raw of canonical?.champions ?? []) {
     if (!raw.apiName || !raw.name || typeof raw.cost !== 'number') continue;
-    if (raw.cost < 1 || raw.cost > 5) continue; // exclui bonecos/summons (custo 0/6+)
+    if (raw.cost < 1 || raw.cost > 5) continue;
+    if (!raw.apiName.startsWith(prefix)) continue;
     champions.push({
       id: raw.apiName,
       name: raw.name,
@@ -75,9 +92,13 @@ export function parseCommunityDragon(json: unknown): CDragonResult {
     });
   }
 
-  const traits = (current?.traits ?? [])
+  const traits = (canonical?.traits ?? [])
     .filter((t): t is Required<RawTrait> => Boolean(t.apiName && t.name))
     .map((t) => ({ id: t.apiName as TraitId, name: t.name }));
 
-  return { setNumber: current?.number ?? 0, setName: current?.name ?? '', items, champions, traits };
+  // O campo `name` da entrada às vezes é lixo ("Set10"); prefere um nome de verdade.
+  const setName =
+    [data.sets?.[String(setNumber)]?.name, canonical?.name].find((n) => !isJunkName(n)) ?? `Set ${setNumber}`;
+
+  return { setNumber, setName, items, champions, traits };
 }

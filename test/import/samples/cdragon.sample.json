@@ -24,7 +24,8 @@
       "champions": [
         { "apiName": "TFT18_Ahri", "name": "Ahri", "cost": 4, "traits": ["Blossom", "Spirit"] },
         { "apiName": "TFT18_Garen", "name": "Garen", "cost": 1, "traits": ["Bruiser"] },
-        { "apiName": "TFT18_Dummy", "name": "Training Dummy", "cost": 0, "traits": [] }
+        { "apiName": "TFT18_Dummy", "name": "Training Dummy", "cost": 0, "traits": [] },
+        { "apiName": "TFT_BlueGolem", "name": "Golem", "cost": 1, "traits": [] }
       ],
       "traits": [
         { "apiName": "TFT18_Blossom", "name": "Blossom" },

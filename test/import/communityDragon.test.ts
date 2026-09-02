@@ -21,10 +21,11 @@ describe('parseCommunityDragon', () => {
     expect(gs.composition).toEqual([C.BF_SWORD, C.RECURVE_BOW]);
   });
 
-  it('CA-I2: campeões custo 1..5 com traits; exclui boneco custo 0', () => {
+  it('CA-I2: só campeões reais do set (prefixo TFT<n>_), sem boneco custo 0 nem summon', () => {
     const ids = r.champions.map((c) => c.id);
     expect(ids).toContain('TFT18_Ahri');
-    expect(ids).not.toContain('TFT18_Dummy');
+    expect(ids).not.toContain('TFT18_Dummy'); // custo 0
+    expect(ids).not.toContain('TFT_BlueGolem'); // summon: sem prefixo TFT18_
     const ahri = r.champions.find((c) => c.id === 'TFT18_Ahri')!;
     expect(ahri.cost).toBe(4);
     expect(ahri.traits).toContain('Blossom');
