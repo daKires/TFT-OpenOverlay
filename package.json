@@ -11,7 +11,8 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "test:watch": "vitest",
-    "import": "tsx scripts/import/run.ts"
+    "import": "tsx scripts/import/run.ts",
+    "diagnose": "tsx scripts/import/diagnose.ts"
   },
   "dependencies": {
     "react": "^18.3.1",
