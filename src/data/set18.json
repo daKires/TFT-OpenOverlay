@@ -1,10 +1,3898 @@
 {
-  "generated": false,
-  "setName": null,
-  "patch": null,
-  "generatedAt": null,
-  "items": [],
-  "champions": [],
-  "comps": [],
-  "traits": []
+  "generated": true,
+  "setName": "Set 18",
+  "patch": "latest",
+  "generatedAt": "2026-09-02T19:38:18.117Z",
+  "items": [
+    {
+      "id": "TFT_Item_RabadonsDeathcap",
+      "name": "Rabadon's Deathcap",
+      "composition": [
+        "TFT_Item_NeedlesslyLargeRod",
+        "TFT_Item_NeedlesslyLargeRod"
+      ]
+    },
+    {
+      "id": "TFT_Item_InfinityEdge",
+      "name": "Infinity Edge",
+      "composition": [
+        "TFT_Item_BFSword",
+        "TFT_Item_SparringGloves"
+      ]
+    },
+    {
+      "id": "TFT_Item_FrozenHeart",
+      "name": "Protector's Vow",
+      "composition": [
+        "TFT_Item_TearOfTheGoddess",
+        "TFT_Item_ChainVest"
+      ]
+    },
+    {
+      "id": "TFT_Item_Redemption",
+      "name": "Spirit Visage",
+      "composition": [
+        "TFT_Item_TearOfTheGoddess",
+        "TFT_Item_GiantsBelt"
+      ]
+    },
+    {
+      "id": "TFT_Item_ThiefsGloves",
+      "name": "Thief's Gloves",
+      "composition": [
+        "TFT_Item_SparringGloves",
+        "TFT_Item_SparringGloves"
+      ]
+    },
+    {
+      "id": "TFT_Item_GuinsoosRageblade",
+      "name": "Guinsoo's Rageblade",
+      "composition": [
+        "TFT_Item_RecurveBow",
+        "TFT_Item_NeedlesslyLargeRod"
+      ]
+    },
+    {
+      "id": "TFT_Item_IonicSpark",
+      "name": "Ionic Spark",
+      "composition": [
+        "TFT_Item_NeedlesslyLargeRod",
+        "TFT_Item_NegatronCloak"
+      ]
+    },
+    {
+      "id": "TFT_Item_SteraksGage",
+      "name": "Sterak's Gage",
+      "composition": [
+        "TFT_Item_BFSword",
+        "TFT_Item_GiantsBelt"
+      ]
+    },
+    {
+      "id": "TFT_Item_DragonsClaw",
+      "name": "Dragon's Claw",
+      "composition": [
+        "TFT_Item_NegatronCloak",
+        "TFT_Item_NegatronCloak"
+      ]
+    },
+    {
+      "id": "TFT_Item_PowerGauntlet",
+      "name": "Striker's Flail",
+      "composition": [
+        "TFT_Item_GiantsBelt",
+        "TFT_Item_SparringGloves"
+      ]
+    },
+    {
+      "id": "TFT_Item_GargoyleStoneplate",
+      "name": "Gargoyle Stoneplate",
+      "composition": [
+        "TFT_Item_ChainVest",
+        "TFT_Item_NegatronCloak"
+      ]
+    },
+    {
+      "id": "TFT_Item_BrambleVest",
+      "name": "Bramble Vest",
+      "composition": [
+        "TFT_Item_ChainVest",
+        "TFT_Item_ChainVest"
+      ]
+    },
+    {
+      "id": "TFT_Item_MadredsBloodrazor",
+      "name": "Giant Slayer",
+      "composition": [
+        "TFT_Item_BFSword",
+        "TFT_Item_RecurveBow"
+      ]
+    },
+    {
+      "id": "TFT_Item_RedBuff",
+      "name": "Sunfire Cape",
+      "composition": [
+        "TFT_Item_ChainVest",
+        "TFT_Item_GiantsBelt"
+      ]
+    },
+    {
+      "id": "TFT_Item_UnstableConcoction",
+      "name": "Hand Of Justice",
+      "composition": [
+        "TFT_Item_TearOfTheGoddess",
+        "TFT_Item_SparringGloves"
+      ]
+    },
+    {
+      "id": "TFT_Item_GuardianAngel",
+      "name": "Edge of Night",
+      "composition": [
+        "TFT_Item_BFSword",
+        "TFT_Item_ChainVest"
+      ]
+    },
+    {
+      "id": "TFT_Item_TitansResolve",
+      "name": "Titan's Resolve",
+      "composition": [
+        "TFT_Item_ChainVest",
+        "TFT_Item_RecurveBow"
+      ]
+    },
+    {
+      "id": "TFT_Item_RunaansHurricane",
+      "name": "Kraken's Fury",
+      "composition": [
+        "TFT_Item_NegatronCloak",
+        "TFT_Item_RecurveBow"
+      ]
+    },
+    {
+      "id": "TFT_Item_Bloodthirster",
+      "name": "Bloodthirster",
+      "composition": [
+        "TFT_Item_BFSword",
+        "TFT_Item_NegatronCloak"
+      ]
+    },
+    {
+      "id": "TFT_Item_ArchangelsStaff",
+      "name": "Archangel's Staff",
+      "composition": [
+        "TFT_Item_NeedlesslyLargeRod",
+        "TFT_Item_TearOfTheGoddess"
+      ]
+    },
+    {
+      "id": "TFT_Item_SpearOfShojin",
+      "name": "Spear of Shojin",
+      "composition": [
+        "TFT_Item_BFSword",
+        "TFT_Item_TearOfTheGoddess"
+      ]
+    },
+    {
+      "id": "TFT_Item_SpectralGauntlet",
+      "name": "Evenshroud",
+      "composition": [
+        "TFT_Item_NegatronCloak",
+        "TFT_Item_GiantsBelt"
+      ]
+    },
+    {
+      "id": "TFT_Item_Leviathan",
+      "name": "Nashor's Tooth",
+      "composition": [
+        "TFT_Item_RecurveBow",
+        "TFT_Item_GiantsBelt"
+      ]
+    },
+    {
+      "id": "TFT_Item_Morellonomicon",
+      "name": "Morellonomicon",
+      "composition": [
+        "TFT_Item_NeedlesslyLargeRod",
+        "TFT_Item_GiantsBelt"
+      ]
+    },
+    {
+      "id": "TFT_Item_RapidFireCannon",
+      "name": "Red Buff",
+      "composition": [
+        "TFT_Item_RecurveBow",
+        "TFT_Item_RecurveBow"
+      ]
+    },
+    {
+      "id": "TFT_Item_Crownguard",
+      "name": "Crownguard",
+      "composition": [
+        "TFT_Item_NeedlesslyLargeRod",
+        "TFT_Item_ChainVest"
+      ]
+    },
+    {
+      "id": "TFT_Item_AdaptiveHelm",
+      "name": "Adaptive Helm",
+      "composition": [
+        "TFT_Item_NegatronCloak",
+        "TFT_Item_TearOfTheGoddess"
+      ]
+    },
+    {
+      "id": "TFT_Item_BlueBuff",
+      "name": "Blue Buff",
+      "composition": [
+        "TFT_Item_TearOfTheGoddess",
+        "TFT_Item_TearOfTheGoddess"
+      ]
+    },
+    {
+      "id": "TFT_Item_LastWhisper",
+      "name": "Last Whisper",
+      "composition": [
+        "TFT_Item_RecurveBow",
+        "TFT_Item_SparringGloves"
+      ]
+    },
+    {
+      "id": "TFT_Item_JeweledGauntlet",
+      "name": "Jeweled Gauntlet",
+      "composition": [
+        "TFT_Item_NeedlesslyLargeRod",
+        "TFT_Item_SparringGloves"
+      ]
+    },
+    {
+      "id": "TFT_Item_NightHarvester",
+      "name": "Steadfast Heart",
+      "composition": [
+        "TFT_Item_ChainVest",
+        "TFT_Item_SparringGloves"
+      ]
+    },
+    {
+      "id": "TFT_Item_Quicksilver",
+      "name": "Quicksilver",
+      "composition": [
+        "TFT_Item_SparringGloves",
+        "TFT_Item_NegatronCloak"
+      ]
+    },
+    {
+      "id": "TFT_Item_Deathblade",
+      "name": "Deathblade",
+      "composition": [
+        "TFT_Item_BFSword",
+        "TFT_Item_BFSword"
+      ]
+    },
+    {
+      "id": "TFT_Item_WarmogsArmor",
+      "name": "Warmog's Armor",
+      "composition": [
+        "TFT_Item_GiantsBelt",
+        "TFT_Item_GiantsBelt"
+      ]
+    },
+    {
+      "id": "TFT_Item_StatikkShiv",
+      "name": "Void Staff",
+      "composition": [
+        "TFT_Item_RecurveBow",
+        "TFT_Item_TearOfTheGoddess"
+      ]
+    },
+    {
+      "id": "TFT_Item_HextechGunblade",
+      "name": "Hextech Gunblade",
+      "composition": [
+        "TFT_Item_BFSword",
+        "TFT_Item_NeedlesslyLargeRod"
+      ]
+    },
+    {
+      "id": "TFT_Item_CorruptedJeweledGauntlet",
+      "name": "Jeweled Gauntlet",
+      "composition": [
+        "TFT_Item_NeedlesslyLargeRod",
+        "TFT_Item_SparringGloves"
+      ]
+    },
+    {
+      "id": "TFT_Item_CorruptedInfinityEdge",
+      "name": "Infinity Edge",
+      "composition": [
+        "TFT_Item_BFSword",
+        "TFT_Item_SparringGloves"
+      ]
+    },
+    {
+      "id": "TFT_Item_CorruptedSpearOfShojin",
+      "name": "Spear of Shojin",
+      "composition": [
+        "TFT_Item_BFSword",
+        "TFT_Item_TearOfTheGoddess"
+      ]
+    },
+    {
+      "id": "TFT_Item_CorruptedRabadonsDeathcap",
+      "name": "Rabadon's Deathcap",
+      "composition": [
+        "TFT_Item_NeedlesslyLargeRod",
+        "TFT_Item_NeedlesslyLargeRod"
+      ]
+    },
+    {
+      "id": "TFT_Item_CorruptedHandOfJustice",
+      "name": "Hand Of Justice",
+      "composition": [
+        "TFT_Item_TearOfTheGoddess",
+        "TFT_Item_SparringGloves"
+      ]
+    },
+    {
+      "id": "TFT_Item_CorruptedRedemption",
+      "name": "Spirit Visage",
+      "composition": [
+        "TFT_Item_TearOfTheGoddess",
+        "TFT_Item_GiantsBelt"
+      ]
+    },
+    {
+      "id": "TFT_Item_CorruptedWarmogsArmor",
+      "name": "Warmog's Armor",
+      "composition": [
+        "TFT_Item_GiantsBelt",
+        "TFT_Item_GiantsBelt"
+      ]
+    },
+    {
+      "id": "TFT_Item_CorruptedGuinsoosRageblade",
+      "name": "Guinsoo's Rageblade",
+      "composition": [
+        "TFT_Item_RecurveBow",
+        "TFT_Item_NeedlesslyLargeRod"
+      ]
+    },
+    {
+      "id": "TFT_Item_CorruptedDeathblade",
+      "name": "Deathblade",
+      "composition": [
+        "TFT_Item_BFSword",
+        "TFT_Item_BFSword"
+      ]
+    },
+    {
+      "id": "TFT_Item_CorruptedGargoyleStoneplate",
+      "name": "Gargoyle Stoneplate",
+      "composition": [
+        "TFT_Item_ChainVest",
+        "TFT_Item_NegatronCloak"
+      ]
+    }
+  ],
+  "champions": [
+    {
+      "id": "DA_Gromp18_AP",
+      "name": "Gromp",
+      "cost": 2,
+      "traits": [
+        "Riftbeast",
+        "Adaptor"
+      ]
+    },
+    {
+      "id": "DA_Murkwolf18",
+      "name": "Murkwolf",
+      "cost": 2,
+      "traits": [
+        "Riftbeast",
+        "Ravager"
+      ]
+    },
+    {
+      "id": "DA_18_Sentry",
+      "name": "Pebbles",
+      "cost": 1,
+      "traits": [
+        "Riftbeast",
+        "Invoker"
+      ]
+    },
+    {
+      "id": "DA_Cinderling18",
+      "name": "Cinderling",
+      "cost": 1,
+      "traits": [
+        "Riftbeast",
+        "Hunter"
+      ]
+    },
+    {
+      "id": "DA_Scuttlecrab18",
+      "name": "Scuttlecrab",
+      "cost": 2,
+      "traits": [
+        "Riftbeast",
+        "Juggernaut"
+      ]
+    },
+    {
+      "id": "DA_Krug18",
+      "name": "Krug",
+      "cost": 3,
+      "traits": [
+        "Riftbeast",
+        "Brawler"
+      ]
+    },
+    {
+      "id": "DA_Sentinel18",
+      "name": "Sentinel",
+      "cost": 4,
+      "traits": [
+        "Riftbeast",
+        "Vanguard",
+        "Invoker"
+      ]
+    },
+    {
+      "id": "DA_Brambleback18",
+      "name": "Brambleback",
+      "cost": 4,
+      "traits": [
+        "Riftbeast",
+        "Ravager"
+      ]
+    },
+    {
+      "id": "DA_18_Xayah",
+      "name": "Xayah",
+      "cost": 1,
+      "traits": [
+        "Elderwood",
+        "Fae",
+        "Rapidfire"
+      ]
+    },
+    {
+      "id": "DA_18_Ornn",
+      "name": "Ornn",
+      "cost": 1,
+      "traits": [
+        "Elderwood",
+        "Defender"
+      ]
+    },
+    {
+      "id": "DA_Nidalee18_AP",
+      "name": "Nidalee",
+      "cost": 4,
+      "traits": [
+        "Primal",
+        "Adaptor"
+      ]
+    },
+    {
+      "id": "DA_18_Hecarim",
+      "name": "Hecarim",
+      "cost": 3,
+      "traits": [
+        "Elderwood",
+        "Vanguard"
+      ]
+    },
+    {
+      "id": "DA_18_Ezreal",
+      "name": "Ezreal",
+      "cost": 4,
+      "traits": [
+        "Elderwood",
+        "Executioner"
+      ]
+    },
+    {
+      "id": "DA_18_Azir",
+      "name": "Azir",
+      "cost": 3,
+      "traits": [
+        "Blackthorn",
+        "Executioner",
+        "Summoner"
+      ]
+    },
+    {
+      "id": "DA_18_RekSai",
+      "name": "Rek'Sai",
+      "cost": 1,
+      "traits": [
+        "Blackthorn",
+        "Brawler"
+      ]
+    },
+    {
+      "id": "DA_18_Veigar",
+      "name": "Veigar",
+      "cost": 1,
+      "traits": [
+        "Blackthorn",
+        "Sprykin",
+        "Spellweaver"
+      ]
+    },
+    {
+      "id": "DA_18_Maokai",
+      "name": "Maokai",
+      "cost": 5,
+      "traits": [
+        "Old Growth",
+        "Juggernaut"
+      ]
+    },
+    {
+      "id": "DA_18_Malphite",
+      "name": "Malphite",
+      "cost": 4,
+      "traits": [
+        "Blackthorn",
+        "Monolith"
+      ]
+    },
+    {
+      "id": "DA_18_Yorick",
+      "name": "Yorick",
+      "cost": 1,
+      "traits": [
+        "Blossom",
+        "Juggernaut",
+        "Summoner"
+      ]
+    },
+    {
+      "id": "DA_18_Yunara",
+      "name": "Yunara",
+      "cost": 2,
+      "traits": [
+        "Blossom",
+        "Executioner"
+      ]
+    },
+    {
+      "id": "DA_18_Sett",
+      "name": "Sett",
+      "cost": 4,
+      "traits": [
+        "Blossom",
+        "Brawler"
+      ]
+    },
+    {
+      "id": "DA_18_Ahri",
+      "name": "Ahri",
+      "cost": 4,
+      "traits": [
+        "Blossom",
+        "Spellweaver"
+      ]
+    },
+    {
+      "id": "DA_18_Ashe",
+      "name": "Ashe",
+      "cost": 5,
+      "traits": [
+        "Blossom",
+        "Hunter"
+      ]
+    },
+    {
+      "id": "DA_18_Elise",
+      "name": "Elise",
+      "cost": 2,
+      "traits": [
+        "Coven",
+        "Vanguard"
+      ]
+    },
+    {
+      "id": "DA_18_Caitlyn",
+      "name": "Caitlyn",
+      "cost": 2,
+      "traits": [
+        "Coven",
+        "Hunter"
+      ]
+    },
+    {
+      "id": "DA_18_Cassiopeia",
+      "name": "Cassiopeia",
+      "cost": 3,
+      "traits": [
+        "Coven",
+        "Spellweaver"
+      ]
+    },
+    {
+      "id": "DA_18_Morgana",
+      "name": "Morgana",
+      "cost": 4,
+      "traits": [
+        "Coven",
+        "Invoker"
+      ]
+    },
+    {
+      "id": "DA_18_Rakan",
+      "name": "Rakan",
+      "cost": 1,
+      "traits": [
+        "Fae",
+        "Juggernaut",
+        "Vanguard"
+      ]
+    },
+    {
+      "id": "DA_18_Lillia",
+      "name": "Lillia",
+      "cost": 4,
+      "traits": [
+        "Fae",
+        "Defender"
+      ]
+    },
+    {
+      "id": "DA_18_Kobuko",
+      "name": "Kobuko",
+      "cost": 1,
+      "traits": [
+        "Sprykin",
+        "Brawler"
+      ]
+    },
+    {
+      "id": "DA_18_Teemo",
+      "name": "Teemo",
+      "cost": 2,
+      "traits": [
+        "Sprykin",
+        "Invoker"
+      ]
+    },
+    {
+      "id": "DA_18_Rammus",
+      "name": "Rammus",
+      "cost": 3,
+      "traits": [
+        "Sprykin",
+        "Defender"
+      ]
+    },
+    {
+      "id": "DA_18_GnarSmall",
+      "name": "Gnar",
+      "cost": 5,
+      "traits": [
+        "Elderwood",
+        "Sprykin",
+        "Brawler"
+      ]
+    },
+    {
+      "id": "DA_18_Tristana",
+      "name": "Tristana",
+      "cost": 3,
+      "traits": [
+        "Fae",
+        "Sprykin",
+        "Hunter"
+      ]
+    },
+    {
+      "id": "DA_18_Sivir",
+      "name": "Sivir",
+      "cost": 4,
+      "traits": [
+        "Primal",
+        "Hunter"
+      ]
+    },
+    {
+      "id": "DA_Vi18",
+      "name": "Vi",
+      "cost": 3,
+      "traits": [
+        "Primal",
+        "Juggernaut"
+      ]
+    },
+    {
+      "id": "DA_18_Akali_AD",
+      "name": "Akali",
+      "cost": 1,
+      "traits": [
+        "Inferno",
+        "Adaptor",
+        "Ravager"
+      ]
+    },
+    {
+      "id": "DA_18_Varus",
+      "name": "Varus",
+      "cost": 1,
+      "traits": [
+        "Inferno",
+        "Rapidfire"
+      ]
+    },
+    {
+      "id": "DA_Amumu18",
+      "name": "Amumu",
+      "cost": 4,
+      "traits": [
+        "Inferno",
+        "Juggernaut"
+      ]
+    },
+    {
+      "id": "DA_18_Kennen",
+      "name": "Kennen",
+      "cost": 5,
+      "traits": [
+        "Inferno",
+        "Executioner"
+      ]
+    },
+    {
+      "id": "DA_18_Aphelios",
+      "name": "Aphelios",
+      "cost": 4,
+      "traits": [
+        "Lunar",
+        "Rapidfire"
+      ]
+    },
+    {
+      "id": "DA_18_Diana",
+      "name": "Diana",
+      "cost": 3,
+      "traits": [
+        "Lunar",
+        "Ravager",
+        "Vanguard"
+      ]
+    },
+    {
+      "id": "DA_18_Alune",
+      "name": "Alune",
+      "cost": 5,
+      "traits": [
+        "Attuned",
+        "Lunar",
+        "Spellweaver"
+      ]
+    },
+    {
+      "id": "DA_18_Leona",
+      "name": "Leona",
+      "cost": 1,
+      "traits": [
+        "Solar",
+        "Defender"
+      ]
+    },
+    {
+      "id": "DA_18_Kayle",
+      "name": "Kayle",
+      "cost": 2,
+      "traits": [
+        "Solar",
+        "Rapidfire"
+      ]
+    },
+    {
+      "id": "DA_18_Sejuani",
+      "name": "Sejuani",
+      "cost": 2,
+      "traits": [
+        "Solar",
+        "Juggernaut"
+      ]
+    },
+    {
+      "id": "DA_18_KhaZix",
+      "name": "Kha'Zix",
+      "cost": 3,
+      "traits": [
+        "Rival"
+      ]
+    },
+    {
+      "id": "DA_18_Rengar",
+      "name": "Rengar",
+      "cost": 3,
+      "traits": [
+        "Rival"
+      ]
+    },
+    {
+      "id": "DA_KogMaw18_AD",
+      "name": "Kog'Maw",
+      "cost": 3,
+      "traits": [
+        "Caustic",
+        "Adaptor",
+        "Invoker"
+      ]
+    },
+    {
+      "id": "DA_18_Zyra",
+      "name": "Zyra",
+      "cost": 4,
+      "traits": [
+        "Thornmaiden",
+        "Summoner"
+      ]
+    },
+    {
+      "id": "DA_Fiddlesticks18",
+      "name": "Fiddlesticks",
+      "cost": 3,
+      "traits": [
+        "Flora Fatalis",
+        "Defender",
+        "Spellweaver"
+      ]
+    },
+    {
+      "id": "DA_18_Soraka",
+      "name": "Soraka",
+      "cost": 4,
+      "traits": [
+        "Flora Fatalis",
+        "Executioner"
+      ]
+    },
+    {
+      "id": "DA_Taric18",
+      "name": "Taric",
+      "cost": 5,
+      "traits": [
+        "Emerald Aspect",
+        "Vanguard"
+      ]
+    },
+    {
+      "id": "DA_18_Ivern",
+      "name": "Ivern",
+      "cost": 5,
+      "traits": [
+        "Greenfather"
+      ]
+    },
+    {
+      "id": "DA_Lux18_Base",
+      "name": "Lux",
+      "cost": 5,
+      "traits": [
+        "Avatar"
+      ]
+    },
+    {
+      "id": "DA_18_Alistar",
+      "name": "Alistar",
+      "cost": 2,
+      "traits": [
+        "Elderwood",
+        "Brawler"
+      ]
+    },
+    {
+      "id": "DA_Draven18",
+      "name": "Draven",
+      "cost": 5,
+      "traits": [
+        "Bounty Seeker"
+      ]
+    },
+    {
+      "id": "DA_18_ElderDragon",
+      "name": "Elder Dragon",
+      "cost": 5,
+      "traits": [
+        "Apex Predator",
+        "Riftbeast"
+      ]
+    },
+    {
+      "id": "DA_Karma18",
+      "name": "Karma",
+      "cost": 1,
+      "traits": [
+        "Blossom",
+        "Spellweaver"
+      ]
+    },
+    {
+      "id": "DA_18_LeBlanc",
+      "name": "LeBlanc",
+      "cost": 2,
+      "traits": [
+        "Elderwood",
+        "Spellweaver"
+      ]
+    },
+    {
+      "id": "DA_18_MasterYi_AD",
+      "name": "Master Yi",
+      "cost": 3,
+      "traits": [
+        "Blossom",
+        "Adaptor"
+      ]
+    },
+    {
+      "id": "DA_18_Shen",
+      "name": "Shen",
+      "cost": 2,
+      "traits": [
+        "Inferno",
+        "Defender"
+      ]
+    },
+    {
+      "id": "DA_18_Warwick",
+      "name": "Warwick",
+      "cost": 2,
+      "traits": [
+        "Blackthorn",
+        "Ravager"
+      ]
+    },
+    {
+      "id": "DA_18_Camille",
+      "name": "Camille",
+      "cost": 1,
+      "traits": [
+        "Coven",
+        "Ravager"
+      ]
+    },
+    {
+      "id": "DA_Lux18_Blackthorn",
+      "name": "Lux (Blackthorn)",
+      "cost": 5,
+      "traits": [
+        "Blackthorn",
+        "Avatar"
+      ]
+    },
+    {
+      "id": "DA_Lux18_Blossom",
+      "name": "Lux (Blossom)",
+      "cost": 5,
+      "traits": [
+        "Blossom",
+        "Avatar"
+      ]
+    },
+    {
+      "id": "DA_18_Lux_Coven",
+      "name": "Lux (Coven)",
+      "cost": 5,
+      "traits": [
+        "Coven",
+        "Avatar"
+      ]
+    },
+    {
+      "id": "DA_18_Lux_Elderwood",
+      "name": "Lux (Elderwood)",
+      "cost": 5,
+      "traits": [
+        "Elderwood",
+        "Avatar"
+      ]
+    },
+    {
+      "id": "DA_18_Lux_Fae",
+      "name": "Lux (Fae)",
+      "cost": 5,
+      "traits": [
+        "Fae",
+        "Avatar"
+      ]
+    },
+    {
+      "id": "DA_18_Lux_Inferno",
+      "name": "Lux (Inferno)",
+      "cost": 5,
+      "traits": [
+        "Inferno",
+        "Avatar"
+      ]
+    },
+    {
+      "id": "DA_18_Lux_Moonbeam",
+      "name": "Lux (Lunar)",
+      "cost": 5,
+      "traits": [
+        "Lunar",
+        "Avatar"
+      ]
+    },
+    {
+      "id": "DA_18_Lux_Primal",
+      "name": "Lux (Primal)",
+      "cost": 5,
+      "traits": [
+        "Primal",
+        "Avatar"
+      ]
+    },
+    {
+      "id": "DA_18_Lux_Sunbeam",
+      "name": "Lux (Solar)",
+      "cost": 5,
+      "traits": [
+        "Solar",
+        "Avatar"
+      ]
+    },
+    {
+      "id": "DA_CrimsonRaptor18",
+      "name": "Mama Beak",
+      "cost": 3,
+      "traits": [
+        "Riftbeast",
+        "Summoner",
+        "Rapidfire"
+      ]
+    }
+  ],
+  "traits": [
+    {
+      "id": "DA_18_Elderwood",
+      "name": "Elderwood"
+    },
+    {
+      "id": "DA_18_LuxUniqueTrait",
+      "name": "Avatar"
+    },
+    {
+      "id": "DA_18_Slayer",
+      "name": "Ravager"
+    },
+    {
+      "id": "DA_DravenUniqueTrait18",
+      "name": "Bounty Seeker"
+    },
+    {
+      "id": "DA_18_Solar",
+      "name": "Solar"
+    },
+    {
+      "id": "DA_18_Sprykin",
+      "name": "Sprykin"
+    },
+    {
+      "id": "DA_18_Adaptor",
+      "name": "Adaptor"
+    },
+    {
+      "id": "DA_18_Coven",
+      "name": "Coven"
+    },
+    {
+      "id": "DA_18_Eclipse",
+      "name": "Eclipse"
+    },
+    {
+      "id": "DA_18_Hunter",
+      "name": "Hunter"
+    },
+    {
+      "id": "DA_18_Maokai_UniqueTrait",
+      "name": "Old Growth"
+    },
+    {
+      "id": "DA_18_Battlemage",
+      "name": "Monolith"
+    },
+    {
+      "id": "DA_Primal18",
+      "name": "Primal"
+    },
+    {
+      "id": "DA_18_Greenfather",
+      "name": "Greenfather"
+    },
+    {
+      "id": "DA_18_Invoker",
+      "name": "Invoker"
+    },
+    {
+      "id": "DA_18_Rapidfire",
+      "name": "Rapidfire"
+    },
+    {
+      "id": "DA_Juggernaut18",
+      "name": "Juggernaut"
+    },
+    {
+      "id": "DA_18_Inferno",
+      "name": "Inferno"
+    },
+    {
+      "id": "DA_AluneUniqueTrait18",
+      "name": "Attuned"
+    },
+    {
+      "id": "DA_18_Rival",
+      "name": "Rival"
+    },
+    {
+      "id": "DA_18_Vanguard",
+      "name": "Vanguard"
+    },
+    {
+      "id": "DA_18_Brawler",
+      "name": "Brawler"
+    },
+    {
+      "id": "DA_18_Blackthorn",
+      "name": "Blackthorn"
+    },
+    {
+      "id": "DA_18_Executioner",
+      "name": "Executioner"
+    },
+    {
+      "id": "DA_18_ApexPredator",
+      "name": "Apex Predator"
+    },
+    {
+      "id": "DA_Riftbeast18",
+      "name": "Riftbeast"
+    },
+    {
+      "id": "DA_18_Caustic",
+      "name": "Caustic"
+    },
+    {
+      "id": "DA_18_Fae",
+      "name": "Fae"
+    },
+    {
+      "id": "DA_18_Lunar",
+      "name": "Lunar"
+    },
+    {
+      "id": "DA_18_Defender",
+      "name": "Defender"
+    },
+    {
+      "id": "DA_18_Spellweaver",
+      "name": "Spellweaver"
+    },
+    {
+      "id": "DA_18_ZyraUniqueTrait",
+      "name": "Thornmaiden"
+    },
+    {
+      "id": "DA_FloraFatalis18",
+      "name": "Flora Fatalis"
+    },
+    {
+      "id": "DA_18_Summoner",
+      "name": "Summoner"
+    },
+    {
+      "id": "DA_18_Blossom",
+      "name": "Blossom"
+    },
+    {
+      "id": "DA_Emerald18",
+      "name": "Emerald Aspect"
+    }
+  ],
+  "comps": [
+    {
+      "id": "fae-rengar",
+      "name": "Fae Rengar",
+      "units": [
+        {
+          "championId": "DA_18_Rengar",
+          "role": "carry",
+          "items": [
+            "TFT_Item_TitansResolve"
+          ]
+        },
+        {
+          "championId": "DA_18_Tristana",
+          "role": "carry",
+          "items": [
+            "TFT_Item_MadredsBloodrazor",
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_HextechGunblade"
+          ]
+        },
+        {
+          "championId": "DA_18_Rammus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Vi18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Hecarim",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Akali_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Cassiopeia",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.242,
+      "top4Rate": 0.53,
+      "sampleSize": 2737
+    },
+    {
+      "id": "executioner-sett",
+      "name": "Executioner Sett",
+      "units": [
+        {
+          "championId": "DA_18_Sett",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Ahri",
+          "role": "carry",
+          "items": [
+            "TFT_Item_RapidFireCannon",
+            "TFT_Item_StatikkShiv"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.563,
+      "top4Rate": 0.487,
+      "sampleSize": 641
+    },
+    {
+      "id": "executioner-draven18",
+      "name": "Executioner Draven18",
+      "units": [
+        {
+          "championId": "DA_Draven18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedDeathblade",
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_RunaansHurricane"
+          ]
+        },
+        {
+          "championId": "DA_18_Maokai",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedRedemption",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.095,
+      "top4Rate": 0.546,
+      "sampleSize": 5005
+    },
+    {
+      "id": "defender-cassiopeia",
+      "name": "Defender Cassiopeia",
+      "units": [
+        {
+          "championId": "DA_18_Cassiopeia",
+          "role": "carry",
+          "items": [
+            "TFT_Item_ArchangelsStaff",
+            "TFT_Item_HextechGunblade"
+          ]
+        },
+        {
+          "championId": "DA_Fiddlesticks18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_IonicSpark",
+            "TFT_Item_CorruptedRedemption",
+            "TFT_Item_RedBuff"
+          ]
+        },
+        {
+          "championId": "DA_18_Rammus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Kayle",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.367,
+      "top4Rate": 0.521,
+      "sampleSize": 6082
+    },
+    {
+      "id": "spellweaver-cassiopeia",
+      "name": "Spellweaver Cassiopeia",
+      "units": [
+        {
+          "championId": "DA_18_Cassiopeia",
+          "role": "carry",
+          "items": [
+            "TFT_Item_ArchangelsStaff",
+            "TFT_Item_HextechGunblade"
+          ]
+        },
+        {
+          "championId": "DA_18_Ahri",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedJeweledGauntlet",
+            "TFT_Item_RapidFireCannon",
+            "TFT_Item_CorruptedSpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_Fiddlesticks18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rammus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.657,
+      "top4Rate": 0.44,
+      "sampleSize": 166
+    },
+    {
+      "id": "hunter-caitlyn",
+      "name": "Hunter Caitlyn",
+      "units": [
+        {
+          "championId": "DA_18_Caitlyn",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_HextechGunblade",
+            "TFT_Item_RunaansHurricane"
+          ]
+        },
+        {
+          "championId": "DA_Scuttlecrab18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedRedemption",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Sejuani",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Kobuko",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Akali_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Yunara",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.413,
+      "top4Rate": 0.529,
+      "sampleSize": 1309
+    },
+    {
+      "id": "elderwood-aphelios",
+      "name": "Elderwood Aphelios",
+      "units": [
+        {
+          "championId": "DA_18_Aphelios",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedDeathblade",
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_CorruptedInfinityEdge"
+          ]
+        },
+        {
+          "championId": "DA_18_Lillia",
+          "role": "carry",
+          "items": [
+            "TFT_Item_SpectralGauntlet",
+            "TFT_Item_RedBuff"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.543,
+      "top4Rate": 0.484,
+      "sampleSize": 3508
+    },
+    {
+      "id": "blossom-sett",
+      "name": "Blossom Sett",
+      "units": [
+        {
+          "championId": "DA_18_Sett",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedRedemption",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Ahri",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedJeweledGauntlet",
+            "TFT_Item_Leviathan",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Akali_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.531,
+      "top4Rate": 0.489,
+      "sampleSize": 2715
+    },
+    {
+      "id": "rival-khazix",
+      "name": "Rival KhaZix",
+      "units": [
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "carry",
+          "items": [
+            "TFT_Item_GuardianAngel",
+            "TFT_Item_CorruptedHandOfJustice",
+            "TFT_Item_CorruptedRabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "carry",
+          "items": [
+            "TFT_Item_GuardianAngel",
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_TitansResolve"
+          ]
+        },
+        {
+          "championId": "DA_18_Hecarim",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Diana",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Fiddlesticks18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Cassiopeia",
+          "role": "core"
+        },
+        {
+          "championId": "DA_KogMaw18_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.447,
+      "top4Rate": 0.512,
+      "sampleSize": 2843
+    },
+    {
+      "id": "adaptor-masteryi",
+      "name": "Adaptor MasterYi",
+      "units": [
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "carry",
+          "items": [
+            "TFT_Item_GuardianAngel",
+            "TFT_Item_CorruptedGuinsoosRageblade"
+          ]
+        },
+        {
+          "championId": "DA_Vi18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_Krug18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_KogMaw18_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rammus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.198,
+      "top4Rate": 0.553,
+      "sampleSize": 7709
+    },
+    {
+      "id": "hunter-sivir",
+      "name": "Hunter Sivir",
+      "units": [
+        {
+          "championId": "DA_18_Sivir",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedInfinityEdge",
+            "TFT_Item_CorruptedSpearOfShojin",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_Amumu18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.485,
+      "top4Rate": 0.5,
+      "sampleSize": 2388
+    },
+    {
+      "id": "invoker-sentry",
+      "name": "Invoker Sentry",
+      "units": [
+        {
+          "championId": "DA_18_Sentry",
+          "role": "carry",
+          "items": [
+            "TFT_Item_BlueBuff",
+            "TFT_Item_CorruptedRabadonsDeathcap",
+            "TFT_Item_CorruptedRabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_FrozenHeart",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_Scuttlecrab18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Teemo",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Cinderling18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Gromp18_AP",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.308,
+      "top4Rate": 0.544,
+      "sampleSize": 351
+    },
+    {
+      "id": "invoker-morgana",
+      "name": "Invoker Morgana",
+      "units": [
+        {
+          "championId": "DA_18_Morgana",
+          "role": "carry",
+          "items": [
+            "TFT_Item_Morellonomicon",
+            "TFT_Item_StatikkShiv"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_FrozenHeart",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.599,
+      "top4Rate": 0.475,
+      "sampleSize": 1595
+    },
+    {
+      "id": "vanguard-aphelios",
+      "name": "Vanguard Aphelios",
+      "units": [
+        {
+          "championId": "DA_18_Aphelios",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedDeathblade",
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_CorruptedInfinityEdge"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_FrozenHeart",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Karma18",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.726,
+      "top4Rate": 0.467,
+      "sampleSize": 10102
+    },
+    {
+      "id": "vanguard-rengar",
+      "name": "Vanguard Rengar",
+      "units": [
+        {
+          "championId": "DA_18_Rengar",
+          "role": "carry",
+          "items": [
+            "TFT_Item_GuardianAngel",
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_TitansResolve"
+          ]
+        },
+        {
+          "championId": "DA_18_Hecarim",
+          "role": "carry",
+          "items": [
+            "TFT_Item_SpectralGauntlet",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_RedBuff"
+          ]
+        },
+        {
+          "championId": "DA_18_Diana",
+          "role": "core"
+        },
+        {
+          "championId": "DA_CrimsonRaptor18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_KogMaw18_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Vi18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Tristana",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Cassiopeia",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.878,
+      "top4Rate": 0.42,
+      "sampleSize": 533
+    },
+    {
+      "id": "sprykin-veigar",
+      "name": "Sprykin Veigar",
+      "units": [
+        {
+          "championId": "DA_18_Veigar",
+          "role": "carry",
+          "items": [
+            "TFT_Item_BlueBuff",
+            "TFT_Item_CorruptedJeweledGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_RekSai",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Kobuko",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Teemo",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Karma18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_LeBlanc",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Yorick",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Akali_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.149,
+      "top4Rate": 0.576,
+      "sampleSize": 3477
+    },
+    {
+      "id": "vanguard-caitlyn",
+      "name": "Vanguard Caitlyn",
+      "units": [
+        {
+          "championId": "DA_18_Caitlyn",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedDeathblade",
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_HextechGunblade"
+          ]
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "carry",
+          "items": [
+            "TFT_Item_Crownguard",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedRedemption"
+          ]
+        },
+        {
+          "championId": "DA_Scuttlecrab18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Murkwolf18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Sejuani",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Warwick",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Teemo",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 5.049,
+      "top4Rate": 0.382,
+      "sampleSize": 346
+    },
+    {
+      "id": "invoker-nidalee18",
+      "name": "Invoker Nidalee18",
+      "units": [
+        {
+          "championId": "DA_Nidalee18_AP",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_CorruptedJeweledGauntlet",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_Sentinel18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_FrozenHeart",
+            "TFT_Item_FrozenHeart",
+            "TFT_Item_FrozenHeart"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.898,
+      "top4Rate": 0.424,
+      "sampleSize": 909
+    },
+    {
+      "id": "adaptor-nidalee18",
+      "name": "Adaptor Nidalee18",
+      "units": [
+        {
+          "championId": "DA_Nidalee18_AP",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedHandOfJustice",
+            "TFT_Item_CorruptedInfinityEdge",
+            "TFT_Item_SteraksGage"
+          ]
+        },
+        {
+          "championId": "DA_Brambleback18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_GuardianAngel",
+            "TFT_Item_MadredsBloodrazor",
+            "TFT_Item_SteraksGage"
+          ]
+        },
+        {
+          "championId": "DA_18_Akali_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.732,
+      "top4Rate": 0.452,
+      "sampleSize": 310
+    },
+    {
+      "id": "executioner-ezreal",
+      "name": "Executioner Ezreal",
+      "units": [
+        {
+          "championId": "DA_18_Malphite",
+          "role": "carry",
+          "items": [
+            "TFT_Item_Crownguard",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Ezreal",
+          "role": "carry",
+          "items": [
+            "TFT_Item_BlueBuff",
+            "TFT_Item_CorruptedInfinityEdge",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Kobuko",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.756,
+      "top4Rate": 0.458,
+      "sampleSize": 1060
+    },
+    {
+      "id": "fae-tristana",
+      "name": "Fae Tristana",
+      "units": [
+        {
+          "championId": "DA_18_Tristana",
+          "role": "carry",
+          "items": [
+            "TFT_Item_MadredsBloodrazor",
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_HextechGunblade"
+          ]
+        },
+        {
+          "championId": "DA_18_Sivir",
+          "role": "carry",
+          "items": [
+            "TFT_Item_LastWhisper",
+            "TFT_Item_RapidFireCannon"
+          ]
+        },
+        {
+          "championId": "DA_18_Rammus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Vi18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Cassiopeia",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.7,
+      "top4Rate": 0.457,
+      "sampleSize": 2029
+    },
+    {
+      "id": "invoker-ahri",
+      "name": "Invoker Ahri",
+      "units": [
+        {
+          "championId": "DA_18_Ahri",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedJeweledGauntlet",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Morgana",
+          "role": "carry",
+          "items": [
+            "TFT_Item_Morellonomicon",
+            "TFT_Item_CorruptedRabadonsDeathcap",
+            "TFT_Item_StatikkShiv"
+          ]
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Akali_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Xayah",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.347,
+      "top4Rate": 0.532,
+      "sampleSize": 7759
+    },
+    {
+      "id": "executioner-malphite",
+      "name": "Executioner Malphite",
+      "units": [
+        {
+          "championId": "DA_18_Malphite",
+          "role": "carry",
+          "items": [
+            "TFT_Item_Crownguard",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Soraka",
+          "role": "carry",
+          "items": [
+            "TFT_Item_ArchangelsStaff",
+            "TFT_Item_CorruptedRabadonsDeathcap",
+            "TFT_Item_CorruptedSpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.484,
+      "top4Rate": 0.509,
+      "sampleSize": 14842
+    },
+    {
+      "id": "executioner-yunara",
+      "name": "Executioner Yunara",
+      "units": [
+        {
+          "championId": "DA_18_Yunara",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedDeathblade",
+            "TFT_Item_CorruptedSpearOfShojin",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Alistar",
+          "role": "carry",
+          "items": [
+            "TFT_Item_SpectralGauntlet",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_FrozenHeart"
+          ]
+        },
+        {
+          "championId": "DA_18_LeBlanc",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rakan",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Sejuani",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Shen",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Teemo",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.584,
+      "top4Rate": 0.519,
+      "sampleSize": 233
+    },
+    {
+      "id": "riftbeast18-sentinel18",
+      "name": "Riftbeast18 Sentinel18",
+      "units": [
+        {
+          "championId": "DA_Sentinel18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_Crownguard",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_ElderDragon",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedInfinityEdge",
+            "TFT_Item_LastWhisper",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Sentry",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Cinderling18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.211,
+      "top4Rate": 0.549,
+      "sampleSize": 2098
+    },
+    {
+      "id": "executioner-ahri",
+      "name": "Executioner Ahri",
+      "units": [
+        {
+          "championId": "DA_18_Ahri",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedSpearOfShojin",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Malphite",
+          "role": "carry",
+          "items": [
+            "TFT_Item_Crownguard",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 5.022,
+      "top4Rate": 0.392,
+      "sampleSize": 1123
+    },
+    {
+      "id": "hunter-sivir",
+      "name": "Hunter Sivir",
+      "units": [
+        {
+          "championId": "DA_18_Sivir",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedInfinityEdge",
+            "TFT_Item_RapidFireCannon",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_Nidalee18_AP",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedInfinityEdge",
+            "TFT_Item_CorruptedSpearOfShojin",
+            "TFT_Item_SteraksGage"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Xayah",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Karma18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.739,
+      "top4Rate": 0.464,
+      "sampleSize": 7603
+    },
+    {
+      "id": "spellweaver-ahri",
+      "name": "Spellweaver Ahri",
+      "units": [
+        {
+          "championId": "DA_18_Ahri",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedJeweledGauntlet",
+            "TFT_Item_CorruptedSpearOfShojin",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Lillia",
+          "role": "carry",
+          "items": [
+            "TFT_Item_Crownguard",
+            "TFT_Item_DragonsClaw",
+            "TFT_Item_CorruptedGargoyleStoneplate"
+          ]
+        }
+      ],
+      "avgPlacement": 4.885,
+      "top4Rate": 0.415,
+      "sampleSize": 313
+    },
+    {
+      "id": "sprykin-teemo",
+      "name": "Sprykin Teemo",
+      "units": [
+        {
+          "championId": "DA_18_Teemo",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedJeweledGauntlet",
+            "TFT_Item_CorruptedSpearOfShojin",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Rammus",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Kobuko",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Tristana",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Alistar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_LeBlanc",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Scuttlecrab18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Warwick",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.689,
+      "top4Rate": 0.463,
+      "sampleSize": 315
+    },
+    {
+      "id": "rapidfire-kayle",
+      "name": "Rapidfire Kayle",
+      "units": [
+        {
+          "championId": "DA_18_Kayle",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_CorruptedJeweledGauntlet",
+            "TFT_Item_CorruptedRabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedRedemption",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Xayah",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Sejuani",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rakan",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_LeBlanc",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Alistar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Shen",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Yorick",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Akali_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Kobuko",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_RekSai",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Karma18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Teemo",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Yunara",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Caitlyn",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.535,
+      "top4Rate": 0.505,
+      "sampleSize": 8868
+    },
+    {
+      "id": "inferno-kayle",
+      "name": "Inferno Kayle",
+      "units": [
+        {
+          "championId": "DA_18_Kayle",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_CorruptedJeweledGauntlet",
+            "TFT_Item_CorruptedRabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_18_Sejuani",
+          "role": "carry",
+          "items": [
+            "TFT_Item_Crownguard",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Shen",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Akali_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rakan",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Xayah",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Scuttlecrab18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Yorick",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Gromp18_AP",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_LeBlanc",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Alistar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Kobuko",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Warwick",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_RekSai",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Karma18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Caitlyn",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.904,
+      "top4Rate": 0.461,
+      "sampleSize": 456
+    },
+    {
+      "id": "spellweaver-ahri",
+      "name": "Spellweaver Ahri",
+      "units": [
+        {
+          "championId": "DA_18_Ahri",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedJeweledGauntlet",
+            "TFT_Item_Leviathan",
+            "TFT_Item_Leviathan"
+          ]
+        },
+        {
+          "championId": "DA_18_Sett",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_IonicSpark",
+            "TFT_Item_CorruptedRedemption"
+          ]
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.827,
+      "top4Rate": 0.442,
+      "sampleSize": 780
+    },
+    {
+      "id": "blackthorn-warwick",
+      "name": "Blackthorn Warwick",
+      "units": [
+        {
+          "championId": "DA_18_Warwick",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedSpearOfShojin",
+            "TFT_Item_SteraksGage",
+            "TFT_Item_TitansResolve"
+          ]
+        },
+        {
+          "championId": "DA_Murkwolf18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_GuardianAngel",
+            "TFT_Item_CorruptedHandOfJustice",
+            "TFT_Item_Quicksilver"
+          ]
+        },
+        {
+          "championId": "DA_18_RekSai",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Kobuko",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Alistar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Shen",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Yunara",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Sejuani",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Caitlyn",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Teemo",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_LeBlanc",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.935,
+      "top4Rate": 0.416,
+      "sampleSize": 387
+    },
+    {
+      "id": "riftbeast18-sentry",
+      "name": "Riftbeast18 Sentry",
+      "units": [
+        {
+          "championId": "DA_18_Sentry",
+          "role": "carry",
+          "items": [
+            "TFT_Item_BlueBuff",
+            "TFT_Item_CorruptedJeweledGauntlet",
+            "TFT_Item_CorruptedRabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_Krug18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedRedemption",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_Murkwolf18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Cinderling18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Scuttlecrab18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Gromp18_AP",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Xayah",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Karma18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.421,
+      "top4Rate": 0.514,
+      "sampleSize": 6898
+    },
+    {
+      "id": "brawler-sett",
+      "name": "Brawler Sett",
+      "units": [
+        {
+          "championId": "DA_18_Sett",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Ezreal",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedInfinityEdge",
+            "TFT_Item_CorruptedSpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Cassiopeia",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Caitlyn",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.975,
+      "top4Rate": 0.403,
+      "sampleSize": 325
+    },
+    {
+      "id": "rival-rengar",
+      "name": "Rival Rengar",
+      "units": [
+        {
+          "championId": "DA_18_Rengar",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_TitansResolve"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedHandOfJustice",
+            "TFT_Item_Leviathan",
+            "TFT_Item_CorruptedRabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_Fiddlesticks18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rammus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Vi18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_KogMaw18_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Cassiopeia",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 5.449,
+      "top4Rate": 0.333,
+      "sampleSize": 78
+    },
+    {
+      "id": "blossom-ahri",
+      "name": "Blossom Ahri",
+      "units": [
+        {
+          "championId": "DA_18_Ahri",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedJeweledGauntlet",
+            "TFT_Item_CorruptedSpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_Sett",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.626,
+      "top4Rate": 0.483,
+      "sampleSize": 831
+    },
+    {
+      "id": "elderwood-ezreal",
+      "name": "Elderwood Ezreal",
+      "units": [
+        {
+          "championId": "DA_18_Ezreal",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedDeathblade",
+            "TFT_Item_MadredsBloodrazor",
+            "TFT_Item_CorruptedSpearOfShojin"
+          ]
+        },
+        {
+          "championId": "DA_18_Hecarim",
+          "role": "carry",
+          "items": [
+            "TFT_Item_SpectralGauntlet",
+            "TFT_Item_CorruptedRedemption",
+            "TFT_Item_RedBuff"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Teemo",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.548,
+      "top4Rate": 0.478,
+      "sampleSize": 1767
+    },
+    {
+      "id": "lunar-kayle",
+      "name": "Lunar Kayle",
+      "units": [
+        {
+          "championId": "DA_18_Kayle",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_CorruptedJeweledGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Aphelios",
+          "role": "carry",
+          "items": [
+            "TFT_Item_MadredsBloodrazor",
+            "TFT_Item_CorruptedInfinityEdge",
+            "TFT_Item_LastWhisper"
+          ]
+        },
+        {
+          "championId": "DA_18_Sejuani",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Shen",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rakan",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Xayah",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Scuttlecrab18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_LeBlanc",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Yorick",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Akali_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Murkwolf18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Gromp18_AP",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Cinderling18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Alistar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Kobuko",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_RekSai",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Karma18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Caitlyn",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Teemo",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Yunara",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.964,
+      "top4Rate": 0.393,
+      "sampleSize": 84
+    },
+    {
+      "id": "fae-xayah",
+      "name": "Fae Xayah",
+      "units": [
+        {
+          "championId": "DA_18_Xayah",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_CorruptedInfinityEdge",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "role": "carry",
+          "items": [
+            "TFT_Item_DragonsClaw",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Rakan",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Akali_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Yorick",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 6.044,
+      "top4Rate": 0.215,
+      "sampleSize": 135
+    },
+    {
+      "id": "juggernaut18-nidalee18",
+      "name": "Juggernaut18 Nidalee18",
+      "units": [
+        {
+          "championId": "DA_Nidalee18_AP",
+          "role": "carry",
+          "items": [
+            "TFT_Item_GuardianAngel",
+            "TFT_Item_Quicksilver",
+            "TFT_Item_SteraksGage"
+          ]
+        },
+        {
+          "championId": "DA_Amumu18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedRedemption",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Cassiopeia",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 5.008,
+      "top4Rate": 0.409,
+      "sampleSize": 492
+    },
+    {
+      "id": "florafatalis18-soraka",
+      "name": "FloraFatalis18 Soraka",
+      "units": [
+        {
+          "championId": "DA_18_Soraka",
+          "role": "carry",
+          "items": [
+            "TFT_Item_BlueBuff",
+            "TFT_Item_CorruptedRabadonsDeathcap",
+            "TFT_Item_CorruptedRabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_18_Kennen",
+          "role": "carry",
+          "items": [
+            "TFT_Item_GuardianAngel",
+            "TFT_Item_CorruptedHandOfJustice",
+            "TFT_Item_CorruptedRabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.775,
+      "top4Rate": 0.445,
+      "sampleSize": 440
+    },
+    {
+      "id": "inferno-amumu18",
+      "name": "Inferno Amumu18",
+      "units": [
+        {
+          "championId": "DA_Amumu18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_BrambleVest",
+            "TFT_Item_FrozenHeart",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Aphelios",
+          "role": "carry",
+          "items": [
+            "TFT_Item_MadredsBloodrazor",
+            "TFT_Item_CorruptedInfinityEdge",
+            "TFT_Item_LastWhisper"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Camille",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.926,
+      "top4Rate": 0.406,
+      "sampleSize": 202
+    },
+    {
+      "id": "blackthorn-khazix",
+      "name": "Blackthorn KhaZix",
+      "units": [
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "carry",
+          "items": [
+            "TFT_Item_GuardianAngel",
+            "TFT_Item_CorruptedHandOfJustice",
+            "TFT_Item_CorruptedRabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_18_Azir",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_HextechGunblade",
+            "TFT_Item_CorruptedRabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_Vi18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Sejuani",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.981,
+      "top4Rate": 0.41,
+      "sampleSize": 363
+    },
+    {
+      "id": "lunar-aphelios",
+      "name": "Lunar Aphelios",
+      "units": [
+        {
+          "championId": "DA_18_Aphelios",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedDeathblade",
+            "TFT_Item_CorruptedDeathblade",
+            "TFT_Item_CorruptedGuinsoosRageblade"
+          ]
+        },
+        {
+          "championId": "DA_18_Alune",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedJeweledGauntlet",
+            "TFT_Item_CorruptedSpearOfShojin",
+            "TFT_Item_StatikkShiv"
+          ]
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.93,
+      "top4Rate": 0.425,
+      "sampleSize": 515
+    },
+    {
+      "id": "florafatalis18-khazix",
+      "name": "FloraFatalis18 KhaZix",
+      "units": [
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "carry",
+          "items": [
+            "TFT_Item_Bloodthirster",
+            "TFT_Item_GuardianAngel",
+            "TFT_Item_CorruptedRabadonsDeathcap"
+          ]
+        },
+        {
+          "championId": "DA_18_Aphelios",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedInfinityEdge",
+            "TFT_Item_LastWhisper",
+            "TFT_Item_RapidFireCannon"
+          ]
+        },
+        {
+          "championId": "DA_18_Cassiopeia",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 5.228,
+      "top4Rate": 0.367,
+      "sampleSize": 338
+    },
+    {
+      "id": "juggernaut18-elderdragon",
+      "name": "Juggernaut18 ElderDragon",
+      "units": [
+        {
+          "championId": "DA_18_ElderDragon",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedInfinityEdge",
+            "TFT_Item_LastWhisper",
+            "TFT_Item_PowerGauntlet"
+          ]
+        },
+        {
+          "championId": "DA_Draven18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_MadredsBloodrazor",
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_RunaansHurricane"
+          ]
+        }
+      ],
+      "avgPlacement": 4.407,
+      "top4Rate": 0.502,
+      "sampleSize": 5942
+    },
+    {
+      "id": "fae-tristana",
+      "name": "Fae Tristana",
+      "units": [
+        {
+          "championId": "DA_18_Tristana",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_CorruptedInfinityEdge"
+          ]
+        },
+        {
+          "championId": "DA_18_Lillia",
+          "role": "carry",
+          "items": [
+            "TFT_Item_SpectralGauntlet",
+            "TFT_Item_FrozenHeart",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Rakan",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Xayah",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 5.448,
+      "top4Rate": 0.313,
+      "sampleSize": 67
+    },
+    {
+      "id": "blackthorn-malphite",
+      "name": "Blackthorn Malphite",
+      "units": [
+        {
+          "championId": "DA_18_Malphite",
+          "role": "carry",
+          "items": [
+            "TFT_Item_Crownguard",
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedRedemption"
+          ]
+        },
+        {
+          "championId": "DA_18_Azir",
+          "role": "carry",
+          "items": [
+            "TFT_Item_MadredsBloodrazor",
+            "TFT_Item_Morellonomicon",
+            "TFT_Item_StatikkShiv"
+          ]
+        },
+        {
+          "championId": "DA_18_RekSai",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Kobuko",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 4.333,
+      "top4Rate": 0.519,
+      "sampleSize": 189
+    },
+    {
+      "id": "defender-rammus",
+      "name": "Defender Rammus",
+      "units": [
+        {
+          "championId": "DA_18_Rammus",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedRedemption",
+            "TFT_Item_NightHarvester"
+          ]
+        },
+        {
+          "championId": "DA_Fiddlesticks18",
+          "role": "carry"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_KogMaw18_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Yunara",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Caitlyn",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 6.68,
+      "top4Rate": 0.16,
+      "sampleSize": 25
+    },
+    {
+      "id": "coven-morgana",
+      "name": "Coven Morgana",
+      "units": [
+        {
+          "championId": "DA_18_Morgana",
+          "role": "carry",
+          "items": [
+            "TFT_Item_Morellonomicon",
+            "TFT_Item_StatikkShiv"
+          ]
+        },
+        {
+          "championId": "DA_18_Cassiopeia",
+          "role": "carry",
+          "items": [
+            "TFT_Item_ArchangelsStaff",
+            "TFT_Item_BlueBuff",
+            "TFT_Item_HextechGunblade"
+          ]
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Kobuko",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 5.706,
+      "top4Rate": 0.294,
+      "sampleSize": 521
+    },
+    {
+      "id": "elderwood-leblanc",
+      "name": "Elderwood LeBlanc",
+      "units": [
+        {
+          "championId": "DA_18_LeBlanc",
+          "role": "carry",
+          "items": [
+            "TFT_Item_MadredsBloodrazor",
+            "TFT_Item_CorruptedSpearOfShojin",
+            "TFT_Item_StatikkShiv"
+          ]
+        },
+        {
+          "championId": "DA_18_Ornn",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_IonicSpark",
+            "TFT_Item_CorruptedRedemption"
+          ]
+        },
+        {
+          "championId": "DA_18_Alistar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Xayah",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Teemo",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Veigar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Kobuko",
+          "role": "core"
+        },
+        {
+          "championId": "DA_Karma18",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_RekSai",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Leona",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Elise",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Varus",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 5.224,
+      "top4Rate": 0.364,
+      "sampleSize": 250
+    },
+    {
+      "id": "summoner-crimsonraptor18",
+      "name": "Summoner CrimsonRaptor18",
+      "units": [
+        {
+          "championId": "DA_CrimsonRaptor18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGuinsoosRageblade",
+            "TFT_Item_RunaansHurricane",
+            "TFT_Item_RunaansHurricane"
+          ]
+        },
+        {
+          "championId": "DA_Krug18",
+          "role": "carry",
+          "items": [
+            "TFT_Item_CorruptedGargoyleStoneplate",
+            "TFT_Item_CorruptedWarmogsArmor",
+            "TFT_Item_CorruptedWarmogsArmor"
+          ]
+        },
+        {
+          "championId": "DA_18_Azir",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_KhaZix",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Rengar",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_MasterYi_AD",
+          "role": "core"
+        },
+        {
+          "championId": "DA_18_Tristana",
+          "role": "core"
+        }
+      ],
+      "avgPlacement": 6.153,
+      "top4Rate": 0.208,
+      "sampleSize": 72
+    }
+  ]
 }
