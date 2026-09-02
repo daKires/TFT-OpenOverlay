@@ -63,15 +63,34 @@ são **interfaces plugáveis**:
 - `CompRepository` — de onde vêm as comps do meta.
 - `ItemRecipeBook` — a tabela de receitas de item.
 
-## Plugando dados reais depois
+## Dados reais do set atual (importador)
 
-Hoje tudo é fixture fictícia. Pra usar dados reais, é só implementar as interfaces (sem tocar no
-scorer):
+Por padrão o app usa **dados de exemplo**. Pra trazer os dados **reais do set atual** (Set 18
+"Enchanted Wilds") — campeões, traits, itens/receitas e comps do meta —, rode o importador **na sua
+máquina** (precisa de internet aberta pro CommunityDragon e o MetaTFT):
 
-- **Itens/receitas + campeões**: [CommunityDragon](https://raw.communitydragon.org/latest/cdragon/tft/en_us.json)
-  (cada item traz o campo `composition` = os 2 componentes).
-- **Comps do meta**: API não-oficial do MetaTFT (`api-hc.metatft.com/tft-comps-api/`) ou o MCP oficial
-  do op.gg.
+```bash
+npm run import
+```
+
+Ele baixa e monta `src/data/set18.json`; o app passa a usar esses dados automaticamente (o rodapé
+mostra "Dados reais: …"). Rode 1 vez e **commite** o `set18.json` gerado. Opções:
+
+```bash
+npm run import -- --patch=18.1                       # fixa um patch em vez de "latest"
+npm run import -- --rank=MASTER,GRANDMASTER,CHALLENGER   # bracket de elo das comps
+npm run import -- --from-samples --out=/tmp/x.json    # dry-run offline (sem rede), pra testar o fluxo
+```
+
+**Como funciona / fontes:**
+- **Itens/receitas + campeões + traits**: [CommunityDragon](https://raw.communitydragon.org/latest/cdragon/tft/en_us.json)
+  (cada item traz `composition` = os 2 componentes; os campeões vêm do set de maior número).
+- **Comps do meta**: API não-oficial do MetaTFT (`api-hc.metatft.com/tft-comps-api/`).
+
+O importador imprime um **relatório** (set/patch, nº de itens/campeões/comps e referências que não
+casaram). O MetaTFT é não-oficial: se ele falhar ou nenhuma comp casar, o app **mantém as comps de
+exemplo** e avisa — nesse caso, me mande o relatório que eu ajusto o mapeamento. Nada disso toca no
+cérebro (`src/core`), que continua puro e offline; o importador é um script à parte (`scripts/import`).
 
 ## Exemplo de uso (código)
 
@@ -89,7 +108,9 @@ console.log(top3[0].comp.name, top3[0].explanation);
 
 ## Nota sobre os dados
 
-Os campeões usam nomes reconhecíveis só pra ficar intuitivo de conferir, mas as **comps, traits e
-estatísticas são fictícias** — servem pra exercitar o scorer. As 8 receitas "dobradas" (ex. B.F.
-Sword ×2 = Deathblade) são estáveis; os cruzamentos usam nomes clássicos e **não** estão amarrados a
-um patch específico. O conjunto real virá do CommunityDragon depois, atrás da mesma interface.
+Enquanto você não roda `npm run import`, os dados são de **exemplo**: os campeões usam nomes
+reconhecíveis só pra ficar intuitivo de conferir, mas as **comps, traits e estatísticas são
+fictícias** — servem pra exercitar o scorer. As 8 receitas "dobradas" (ex. B.F. Sword ×2 =
+Deathblade) são estáveis; os cruzamentos usam nomes clássicos. O ponto de entrada de dados é o
+`loadData()` (em `src/core/data`), que usa os dados reais do `set18.json` quando existem e cai nos de
+exemplo quando não — a UI e os testes consomem daí sem saber a origem.

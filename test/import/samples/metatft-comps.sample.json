@@ -1,0 +1,17 @@
+{
+  "cluster_details": [
+    {
+      "Cluster": 1,
+      "name_string": "Blossom Ahri",
+      "units": [
+        { "apiName": "TFT18_Ahri", "items": ["Giant Slayer", "Infinity Edge", "Nonexistent Item"] },
+        { "apiName": "TFT18_Garen", "items": [] }
+      ]
+    },
+    {
+      "Cluster": 2,
+      "name_string": "Mystery Comp",
+      "units": [{ "apiName": "TFT18_Unknown", "items": [] }]
+    }
+  ]
+}

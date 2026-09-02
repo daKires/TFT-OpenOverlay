@@ -59,3 +59,7 @@ export {
 export { ITEMS, ITEM_LIST, createDefaultRecipeBook } from './fixtures/items';
 export { EXAMPLE_COMPS } from './fixtures/comps';
 export { EXAMPLE_CHAMPIONS, championName, getChampion } from './fixtures/champions';
+
+// Pacote de dados + loader (dados reais do set quando existirem; senão exemplo)
+export type { DataBundle } from './data/bundle';
+export { loadData, type LoadedData, type DataSource } from './data/loadData';

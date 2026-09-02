@@ -1,0 +1,35 @@
+{
+  "items": [
+    { "apiName": "TFT_Item_BFSword", "name": "B.F. Sword", "composition": [] },
+    { "apiName": "TFT_Item_RecurveBow", "name": "Recurve Bow", "composition": [] },
+    { "apiName": "TFT_Item_SparringGloves", "name": "Sparring Gloves", "composition": [] },
+    { "apiName": "TFT_Item_Deathblade", "name": "Deathblade", "composition": ["TFT_Item_BFSword", "TFT_Item_BFSword"] },
+    { "apiName": "TFT_Item_GiantSlayer", "name": "Giant Slayer", "composition": ["TFT_Item_BFSword", "TFT_Item_RecurveBow"] },
+    { "apiName": "TFT_Item_InfinityEdge", "name": "Infinity Edge", "composition": ["TFT_Item_BFSword", "TFT_Item_SparringGloves"] },
+    { "apiName": "TFT18_Item_BlossomEmblem", "name": "Blossom Emblem", "composition": ["TFT_Item_Spatula", "TFT_Item_NeedlesslyLargeRod"] },
+    { "apiName": "TFT_Item_ArtifactThing", "name": "Some Artifact", "composition": [] }
+  ],
+  "setData": [
+    {
+      "number": 17,
+      "mutator": "TFTSet17",
+      "name": "Space Gods",
+      "champions": [{ "apiName": "TFT17_Old", "name": "Old Champ", "cost": 3, "traits": ["OldTrait"] }],
+      "traits": [{ "apiName": "TFT17_OldTrait", "name": "OldTrait" }]
+    },
+    {
+      "number": 18,
+      "mutator": "TFTSet18",
+      "name": "Enchanted Wilds",
+      "champions": [
+        { "apiName": "TFT18_Ahri", "name": "Ahri", "cost": 4, "traits": ["Blossom", "Spirit"] },
+        { "apiName": "TFT18_Garen", "name": "Garen", "cost": 1, "traits": ["Bruiser"] },
+        { "apiName": "TFT18_Dummy", "name": "Training Dummy", "cost": 0, "traits": [] }
+      ],
+      "traits": [
+        { "apiName": "TFT18_Blossom", "name": "Blossom" },
+        { "apiName": "TFT18_Bruiser", "name": "Bruiser" }
+      ]
+    }
+  ]
+}

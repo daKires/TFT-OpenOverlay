@@ -1,10 +1,7 @@
 import { useMemo, useState } from 'react';
 import {
   suggestComps,
-  createDefaultRecipeBook,
-  EXAMPLE_COMPS,
-  EXAMPLE_CHAMPIONS,
-  championName,
+  loadData,
   COMPONENT_LIST,
   type ChampionId,
   type ComponentId,
@@ -14,9 +11,9 @@ import { UnitPicker } from './components/UnitPicker';
 import { ComponentPicker } from './components/ComponentPicker';
 import { ResultCard } from './components/ResultCard';
 
-// A UI é só um ADAPTADOR: monta um HeldState e chama o cérebro. Nada da lógica
-// de scoring vive aqui.
-const book = createDefaultRecipeBook();
+// A UI é só um ADAPTADOR: monta um HeldState e chama o cérebro. Os dados vêm do
+// loadData() — reais do set quando o importador rodou, senão os de exemplo.
+const data = loadData();
 
 export function App() {
   const [units, setUnits] = useState<Set<ChampionId>>(new Set());
@@ -31,7 +28,7 @@ export function App() {
   }, [units, counts]);
 
   const top3 = useMemo(
-    () => suggestComps(held, EXAMPLE_COMPS, { book, championName }).slice(0, 3),
+    () => suggestComps(held, data.comps, { book: data.book, championName: data.championName }).slice(0, 3),
     [held],
   );
 
@@ -64,7 +61,7 @@ export function App() {
 
       <div className="layout">
         <section className="panel">
-          <UnitPicker champions={EXAMPLE_CHAMPIONS} selected={units} onToggle={toggleUnit} />
+          <UnitPicker champions={data.champions} selected={units} onToggle={toggleUnit} />
           <ComponentPicker components={COMPONENT_LIST} counts={counts} onAdd={addComponent} onRemove={removeComponent} />
           {hasInput && (
             <button className="btn-clear" onClick={clearAll}>
@@ -78,13 +75,25 @@ export function App() {
           {!hasInput && (
             <p className="hint">Escolha ao menos uma unidade ou uma peça pra ver as sugestões.</p>
           )}
-          {hasInput && top3.map((s, i) => <ResultCard key={s.comp.id} suggestion={s} rank={i + 1} />)}
+          {hasInput && top3.map((s, i) => (
+            <ResultCard key={s.comp.id} suggestion={s} rank={i + 1} championName={data.championName} />
+          ))}
         </section>
       </div>
 
       <footer className="app__footer">
-        Dados de exemplo (fictícios). A lógica é desacoplada: hoje esta tela monta o estado; amanhã ele pode vir de
-        visão computacional, Overwolf ou da API da Riot — sem mudar o cérebro.
+        {data.source === 'set18' ? (
+          <>
+            Dados reais: <strong>{data.setName ?? 'set atual'}</strong>
+            {data.patch && data.patch !== 'latest' ? ` (patch ${data.patch})` : ''} — {data.champions.length} campeões,{' '}
+            {data.comps.length} comps. A lógica é desacoplada da fonte do estado.
+          </>
+        ) : (
+          <>
+            Dados de <strong>exemplo</strong> (fictícios) — rode <code>npm run import</code> pra trazer os dados reais do set
+            atual. A lógica é desacoplada: hoje esta tela monta o estado; amanhã pode vir de visão computacional ou Overwolf.
+          </>
+        )}
       </footer>
     </div>
   );

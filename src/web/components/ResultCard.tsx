@@ -1,4 +1,4 @@
-import { championName, componentName, type CompSuggestion, type CompTier } from '../../core/index';
+import { componentName, type ChampionId, type CompSuggestion, type CompTier } from '../../core/index';
 
 const TIER_CLASS: Record<CompTier, string> = {
   S: 'tier-s',
@@ -11,9 +11,10 @@ const TIER_CLASS: Record<CompTier, string> = {
 interface Props {
   suggestion: CompSuggestion;
   rank: number;
+  championName: (id: ChampionId) => string;
 }
 
-export function ResultCard({ suggestion, rank }: Props) {
+export function ResultCard({ suggestion, rank, championName }: Props) {
   const { comp, breakdown, why } = suggestion;
   const matched = new Set(why.matchedUnits);
   const pct = (x: number) => Math.round(x * 100);
