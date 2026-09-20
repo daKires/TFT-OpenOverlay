@@ -68,6 +68,26 @@ body {
 }
 .search:focus { outline: none; border-color: var(--accent); }
 
+.cost-filter { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.cost-filter__btn {
+  min-width: 30px; height: 28px; padding: 0 9px;
+  background: var(--panel-2); color: var(--muted);
+  border: 1px solid var(--line); border-left: 3px solid var(--cost-1);
+  border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;
+  transition: transform 0.05s ease, border-color 0.1s ease, background 0.1s ease, color 0.1s ease;
+}
+.cost-filter__btn:hover { transform: translateY(-1px); color: var(--text); }
+.cost-filter__btn--on {
+  color: var(--text); background: #0e1117; border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent) inset;
+}
+.cost-filter__btn.cost-1 { border-left-color: var(--cost-1); }
+.cost-filter__btn.cost-2 { border-left-color: var(--cost-2); }
+.cost-filter__btn.cost-3 { border-left-color: var(--cost-3); }
+.cost-filter__btn.cost-4 { border-left-color: var(--cost-4); }
+.cost-filter__btn.cost-5 { border-left-color: var(--cost-5); }
+.cost-filter__btn--all { border-left-color: var(--line); }
+
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip {
   display: inline-flex; align-items: center; gap: 6px;
@@ -106,6 +126,21 @@ body {
 }
 .stepper button:disabled { opacity: 0.35; cursor: default; }
 .stepper__n { min-width: 22px; text-align: center; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* ---- economia (estado do tabuleiro) ---- */
+.economy__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.economy__field { display: flex; flex-direction: column; gap: 4px; }
+.economy__label { color: var(--muted); font-size: 12px; }
+.economy__input {
+  background: var(--panel-2); border: 1px solid var(--line); color: var(--text);
+  border-radius: 8px; padding: 7px 10px; font-size: 13px; width: 100%;
+  font-variant-numeric: tabular-nums;
+}
+.economy__input:focus { outline: none; border-color: var(--accent); }
 
 .btn-clear {
   align-self: flex-start; background: transparent; color: var(--muted);
@@ -164,5 +199,34 @@ body {
 .item__status { color: var(--muted); font-size: 12px; }
 .item--complete .item__status { color: var(--good); }
 .item--one-away .item__status { color: var(--warn); }
+
+/* ---- painel de análise (híbrido: core determinístico + Jev) ---- */
+.analysis { display: flex; flex-direction: column; gap: 10px; }
+.analysis__head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.analysis__head h2 { margin: 0; font-size: 18px; }
+.analysis__loading { color: var(--muted); font-size: 13px; }
+.analysis__note { color: var(--muted); font-size: 12px; }
+.analysis__pick > .card {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent) inset, 0 10px 30px -18px var(--accent);
+}
+.analysis__plan { margin: 0; color: var(--muted); font-size: 13px; }
+.analysis__plan-label { color: var(--accent); font-weight: 600; }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; font-weight: 700; border-radius: 20px; padding: 3px 10px;
+}
+.badge--jev { background: var(--accent); color: #04211d; }
+
+.confidence { display: grid; grid-template-columns: auto 1fr 42px; align-items: center; gap: 8px; }
+.confidence__label { color: var(--muted); font-size: 12px; }
+.confidence__track { height: 8px; background: #0e1117; border-radius: 6px; overflow: hidden; }
+.confidence__fill {
+  display: block; height: 100%;
+  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+  border-radius: 6px; transition: width 0.3s ease;
+}
+.confidence__pct { text-align: right; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
 
 .app__footer { margin-top: 34px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); padding-top: 14px; }

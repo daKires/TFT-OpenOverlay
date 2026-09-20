@@ -6,9 +6,10 @@
   "description": "Camada 1 (o cérebro) do TFT-OpenOverlay: sugere e ranqueia comps do meta a partir do que o jogador tem (unidades + componentes soltos).",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && vite build --config vite.cli.config.ts",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
+    "selftest": "node dist/index.js --selftest",
     "test": "vitest run",
     "test:watch": "vitest",
     "import": "tsx scripts/import/run.ts",

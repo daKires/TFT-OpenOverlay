@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import {
   suggestComps,
   loadData,
@@ -10,14 +10,21 @@ import {
 import { UnitPicker } from './components/UnitPicker';
 import { ComponentPicker } from './components/ComponentPicker';
 import { ResultCard } from './components/ResultCard';
+import { AnalysisPanel } from './components/AnalysisPanel';
+import { BoardContext, type Economy } from './components/BoardContext';
+import { usePersistentState } from './usePersistentState';
 
 // A UI é só um ADAPTADOR: monta um HeldState e chama o cérebro. Os dados vêm do
 // loadData() — reais do set quando o importador rodou, senão os de exemplo.
 const data = loadData();
 
 export function App() {
-  const [units, setUnits] = useState<Set<ChampionId>>(new Set());
-  const [counts, setCounts] = useState<Record<ComponentId, number>>({});
+  // Sets viram arrays na persistência (serializa/desserializa).
+  const [unitIds, setUnitIds] = usePersistentState<ChampionId[]>('tft.units', []);
+  const [counts, setCounts] = usePersistentState<Record<ComponentId, number>>('tft.counts', {});
+  const [economy, setEconomy] = usePersistentState<Economy>('tft.economy', {});
+
+  const units = useMemo(() => new Set(unitIds), [unitIds]);
 
   const held: HeldState = useMemo(() => {
     const components: ComponentId[] = [];
@@ -27,25 +34,23 @@ export function App() {
     return { units: [...units].map((championId) => ({ championId })), components };
   }, [units, counts]);
 
-  const top3 = useMemo(
-    () => suggestComps(held, data.comps, { book: data.book, championName: data.championName }).slice(0, 3),
+  // suggestComps já devolve ordenado — os 5 primeiros alimentam a análise híbrida.
+  const candidates = useMemo(
+    () => suggestComps(held, data.comps, { book: data.book, championName: data.championName }).slice(0, 5),
     [held],
   );
+  const top3 = candidates.slice(0, 3);
 
   function toggleUnit(id: ChampionId) {
-    setUnits((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
+    setUnitIds((prev) => (prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]));
   }
   const addComponent = (id: ComponentId) => setCounts((p) => ({ ...p, [id]: (p[id] ?? 0) + 1 }));
   const removeComponent = (id: ComponentId) =>
     setCounts((p) => ({ ...p, [id]: Math.max(0, (p[id] ?? 0) - 1) }));
   const clearAll = () => {
-    setUnits(new Set());
+    setUnitIds([]);
     setCounts({});
+    setEconomy({});
   };
 
   const hasInput = units.size > 0 || Object.values(counts).some((n) => n > 0);
@@ -61,6 +66,7 @@ export function App() {
 
       <div className="layout">
         <section className="panel">
+          <BoardContext economy={economy} onChange={setEconomy} />
           <UnitPicker champions={data.champions} selected={units} onToggle={toggleUnit} />
           <ComponentPicker components={COMPONENT_LIST} counts={counts} onAdd={addComponent} onRemove={removeComponent} />
           {hasInput && (
@@ -71,6 +77,14 @@ export function App() {
         </section>
 
         <section className="results">
+          {hasInput && (
+            <AnalysisPanel
+              candidates={candidates}
+              held={held}
+              economy={economy}
+              championName={data.championName}
+            />
+          )}
           <h2>Top 3 comps pra você</h2>
           {!hasInput && (
             <p className="hint">Escolha ao menos uma unidade ou uma peça pra ver as sugestões.</p>
