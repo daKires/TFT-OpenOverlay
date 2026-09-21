@@ -8,6 +8,7 @@ import {
   suggestComps,
   createDefaultRecipeBook,
   EXAMPLE_COMPS,
+  EXAMPLE_CHAMPIONS,
   championName,
   COMPONENTS as C,
   type HeldState,
@@ -17,7 +18,7 @@ const book = createDefaultRecipeBook();
 const held: HeldState = { units: [{ championId: 'jinx' }], components: [C.BF_SWORD, C.RECURVE_BOW] };
 const economy = { gold: 30, level: 7, stage: '3-2', hp: 64 };
 const candidates = suggestComps(held, EXAMPLE_COMPS, { book, championName });
-const params: AnalyzeParams = { held, economy, candidates };
+const params: AnalyzeParams = { held, economy, candidates, champions: EXAMPLE_CHAMPIONS };
 
 function okResponse(payload: unknown): Response {
   return { ok: true, status: 200, json: async () => payload } as unknown as Response;
@@ -32,7 +33,7 @@ afterEach(() => {
 
 describe('buildAnalysisState', () => {
   it('serializa tabuleiro, economia e candidatos em JSON legível', () => {
-    const json = buildAnalysisState(held, economy, candidates);
+    const json = buildAnalysisState(held, economy, candidates, EXAMPLE_CHAMPIONS);
     const state = JSON.parse(json);
     expect(state.board.units[0].championId).toBe('jinx');
     expect(state.board.components).toEqual([C.BF_SWORD, C.RECURVE_BOW]);
@@ -42,6 +43,21 @@ describe('buildAnalysisState', () => {
     expect(typeof state.candidates[0].breakdown.unitOverlap).toBe('number');
     expect(typeof state.candidates[0].breakdown.itemBuildability).toBe('number');
     expect(json).toContain('\n');
+  });
+
+  it('enriquece o state com nome/traits das unidades e held/fit por candidato', () => {
+    const state = JSON.parse(buildAnalysisState(held, economy, candidates, EXAMPLE_CHAMPIONS));
+    expect(typeof state.board.units[0].name).toBe('string');
+    expect(Array.isArray(state.board.units[0].traits)).toBe(true);
+    const cand = state.candidates[0];
+    expect(typeof cand.fit).toBe('number');
+    expect(Array.isArray(cand.units)).toBe(true);
+    expect(typeof cand.units[0].name).toBe('string');
+    expect(typeof cand.units[0].held).toBe('boolean');
+    // held reflete why.matchedUnits: nenhuma unidade da comp fora das matched pode vir true.
+    const matched = new Set(candidates[0].why.matchedUnits);
+    const heldUnits = candidates[0].comp.units.filter((_, i) => cand.units[i].held);
+    expect(heldUnits.every((u) => matched.has(u.championId))).toBe(true);
   });
 });
 
