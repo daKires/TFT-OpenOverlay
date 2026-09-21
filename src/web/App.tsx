@@ -12,6 +12,7 @@ import { ComponentPicker } from './components/ComponentPicker';
 import { ResultCard } from './components/ResultCard';
 import { AnalysisPanel } from './components/AnalysisPanel';
 import { BoardContext, type Economy } from './components/BoardContext';
+import { JevSettings } from './components/JevSettings';
 import { usePersistentState } from './usePersistentState';
 
 // A UI é só um ADAPTADOR: monta um HeldState e chama o cérebro. Os dados vêm do
@@ -58,10 +59,13 @@ export function App() {
   return (
     <div className="app">
       <header className="app__header">
-        <h1>
-          TFT <span className="dot">·</span> Sugeridor de Comps
-        </h1>
-        <p>Diga o que você tem — as unidades e as peças de item soltas — e veja as 3 comps que mais combinam.</p>
+        <div className="app__header-text">
+          <h1>
+            TFT <span className="dot">·</span> Sugeridor de Comps
+          </h1>
+          <p>Diga o que você tem — as unidades e as peças de item soltas — e veja as 3 comps que mais combinam.</p>
+        </div>
+        <JevSettings />
       </header>
 
       <div className="layout">
