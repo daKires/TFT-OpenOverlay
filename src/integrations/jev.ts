@@ -13,12 +13,16 @@ const JEV_MODEL = 'jev-latest';
 export interface JevChoiceQuestion {
   type: 'choice';
   options: string[];
+  /** criteria: dict opção -> descrição do que faz aquela opção ser a certa. */
+  criteria: Record<string, string>;
 }
 
 export interface JevScoreQuestion {
   type: 'score';
   min: number;
   max: number;
+  /** criteria: níveis ordenados (ex. baixo/médio/alto) que o score posiciona. */
+  criteria: string[];
 }
 
 export type JevQuestion = JevChoiceQuestion | JevScoreQuestion;
@@ -35,10 +39,13 @@ export interface JevRequest {
 
 export interface JevQuestionAnswer {
   type?: string;
+  /** choice: a opção escolhida direto. */
+  choice?: string;
+  confidence?: number;
   /** choice: opção -> probabilidade. */
   distribution?: Record<string, number>;
   probabilities?: Record<string, number>;
-  /** score: valor único. */
+  /** score: valor (a API devolve normalizado 0..1). */
   value?: number;
   score?: number;
 }
@@ -122,8 +129,17 @@ export async function analyze({ held, economy, candidates }: AnalyzeParams): Pro
     model: JEV_MODEL,
     state: buildAnalysisState(held, economy, candidates),
     questions: {
-      which_comp: { type: 'choice', options: candidates.map((c) => c.comp.id) },
-      commit_confidence: { type: 'score', min: 0, max: 100 },
+      which_comp: {
+        type: 'choice',
+        options: candidates.map((c) => c.comp.id),
+        criteria: Object.fromEntries(candidates.map((c) => [c.comp.id, compCriteria(c)])),
+      },
+      commit_confidence: {
+        type: 'score',
+        min: 0,
+        max: 100,
+        criteria: ['baixo', 'médio', 'alto'],
+      },
     },
   };
 
@@ -147,16 +163,34 @@ export async function analyze({ held, economy, candidates }: AnalyzeParams): Pro
   }
 
   const answers = extractAnswers(raw);
-  const distribution = readDistribution(answers.which_comp);
-  const entries = Object.entries(distribution);
-  if (entries.length === 0) return null;
-
-  const [chosenCompId] = entries.reduce((best, cur) => (cur[1] > best[1] ? cur : best));
+  const whichComp = answers.which_comp as JevQuestionAnswer | undefined;
+  const distribution = readDistribution(whichComp);
   const ids = new Set(candidates.map((c) => c.comp.id));
+
+  // A API devolve a escolha em `choice`; se faltar, cai no maior da distribuição.
+  let chosenCompId = typeof whichComp?.choice === 'string' ? whichComp.choice : '';
+  if (!ids.has(chosenCompId)) {
+    const entries = Object.entries(distribution);
+    if (entries.length === 0) return null;
+    chosenCompId = entries.reduce((best, cur) => (cur[1] > best[1] ? cur : best))[0];
+  }
   if (!ids.has(chosenCompId)) return null;
 
-  const commitConfidence = clamp(readScore(answers.commit_confidence) ?? 0, 0, 100);
+  const commitConfidence = clamp(readCommit(answers.commit_confidence), 0, 100);
   return { chosenCompId, distribution, commitConfidence };
+}
+
+// A comp escolhida ganha, no criteria, um resumo do encaixe que o motor calculou.
+function compCriteria(s: CompSuggestion): string {
+  const pct = (n: number) => Math.round(n * 100);
+  const tier = s.comp.tier ? `tier ${s.comp.tier}` : 'sem tier';
+  return `${s.comp.name} — ${tier}, encaixe ${pct(s.breakdown.fit)}% (unidades ${pct(s.breakdown.unitOverlap)}%, itens ${pct(s.breakdown.itemBuildability)}%)`;
+}
+
+// O score do Jev vem normalizado (0..1); vira porcentagem. Tolera um 0..100 cru.
+function readCommit(answer: unknown): number {
+  const n = readScore(answer) ?? 0;
+  return n <= 1 ? n * 100 : n;
 }
 
 // ---------------------------------------------------------------------------

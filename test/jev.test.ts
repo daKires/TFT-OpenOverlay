@@ -50,8 +50,8 @@ describe('analyze (Jev)', () => {
     const fetchMock = vi.fn(async (_url: string, _init: RequestInit) =>
       okResponse({
         answers: {
-          which_comp: { type: 'choice', distribution: { [candidates[0].comp.id]: 1 } },
-          commit_confidence: { type: 'score', value: 50 },
+          which_comp: { type: 'choice', choice: candidates[0].comp.id, probabilities: { [candidates[0].comp.id]: 1 } },
+          commit_confidence: { type: 'score', score: 0.5 },
         },
       }),
     );
@@ -70,23 +70,28 @@ describe('analyze (Jev)', () => {
     expect(typeof body.state).toBe('string');
     expect(body.questions.which_comp.type).toBe('choice');
     expect(body.questions.which_comp.options).toEqual(candidates.map((c) => c.comp.id));
+    // criteria é obrigatório: dict por opção no choice, lista de níveis no score.
+    expect(Object.keys(body.questions.which_comp.criteria).sort()).toEqual(
+      candidates.map((c) => c.comp.id).sort(),
+    );
     expect(body.questions.commit_confidence.type).toBe('score');
-    expect(body.questions.commit_confidence.min).toBe(0);
-    expect(body.questions.commit_confidence.max).toBe(100);
+    expect(Array.isArray(body.questions.commit_confidence.criteria)).toBe(true);
+    expect(body.questions.commit_confidence.criteria.length).toBeGreaterThan(0);
   });
 
-  it('parseia a resposta: escolhe a opção de maior probabilidade e lê a confiança', async () => {
+  it('parseia a resposta real: usa choice, distribui probabilities e converte score 0..1 em %', async () => {
     const ids = candidates.map((c) => c.comp.id);
     const chosen = ids[1];
     const other = ids[0];
-    const distribution = { [other]: 0.25, [chosen]: 0.75 };
+    const probabilities = { [other]: 0.25, [chosen]: 0.75 };
     vi.stubGlobal(
       'fetch',
       vi.fn(async () =>
         okResponse({
+          model: 'jev-1.13.0',
           answers: {
-            which_comp: { type: 'choice', distribution },
-            commit_confidence: { type: 'score', value: 82 },
+            which_comp: { type: 'choice', choice: chosen, confidence: 0.8, probabilities },
+            commit_confidence: { type: 'score', score: 0.82, confidence: 0.44 },
           },
         }),
       ),
@@ -96,7 +101,7 @@ describe('analyze (Jev)', () => {
     expect(out).not.toBeNull();
     expect(out!.chosenCompId).toBe(chosen);
     expect(out!.commitConfidence).toBe(82);
-    expect(out!.distribution).toEqual(distribution);
+    expect(out!.distribution).toEqual(probabilities);
   });
 
   it('retorna null quando o fetch responde não-ok', async () => {
@@ -120,8 +125,8 @@ describe('analyze (Jev)', () => {
       vi.fn(async () =>
         okResponse({
           answers: {
-            which_comp: { type: 'choice', distribution: { 'comp-inexistente': 1 } },
-            commit_confidence: { type: 'score', value: 90 },
+            which_comp: { type: 'choice', choice: 'comp-inexistente', probabilities: { 'comp-inexistente': 1 } },
+            commit_confidence: { type: 'score', score: 0.9 },
           },
         }),
       ),
