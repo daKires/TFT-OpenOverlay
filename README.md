@@ -51,17 +51,30 @@ O app tem integração com o **Jev** (TypeSafe AI), mas ela é **totalmente opci
 
   (veja o modelo em [`.env.example`](.env.example)).
 
-- Com a chave configurada, a análise por Jev roda através do **proxy do Vite**, que lê a chave
-  **apenas no servidor local**. A chave **nunca vai pro bundle** do navegador.
+- No **navegador** (`npm run dev`), a análise passa pelo **proxy do Vite**, que lê a chave do `.env`
+  **apenas no servidor local** — a chave **nunca vai pro bundle**.
+- No **app desktop** (Tauri), a chave é configurada por uma **tela dentro do app** e guardada num
+  store local; a chamada ao Jev é feita pelo **backend em Rust**, não pelo navegador.
 - **Sem chave, o app cai automaticamente no suggester determinístico** e funciona normalmente — você
   não precisa de chave nenhuma pra usar o app.
 
-## Instalador desktop (Tauri) — próximo passo
+## Instalador desktop (Tauri)
 
-O alvo do projeto é poder ser empacotado como um **app desktop instalável** via
-[Tauri](https://tauri.app/) (ex. um `.exe`/`.app`/`.AppImage` em vez de abrir no navegador). Isso é um
-**próximo passo**: **ainda não está implementado**. Por enquanto, o uso é o app local rodando com
-`npm run dev` (ou o build servido localmente).
+O app pode ser empacotado como um **executável desktop** (Windows) via
+[Tauri](https://tauri.app/). Pré-requisitos (uma vez): **Rust** ([rustup](https://rustup.rs)) e o
+**Microsoft C++ Build Tools** (workload "Desktop development with C++"); no Windows 11 o WebView2 já
+vem instalado.
+
+```bash
+npm install
+npx tauri icon caminho/para/um-logo.png   # gera os ícones (1ª vez; use seu próprio logo)
+npm run tauri:dev                           # abre o app desktop em modo dev
+npm run tauri build                         # gera o instalador
+```
+
+O instalador sai em `src-tauri/target/release/bundle/` (`.msi` e `.exe`/NSIS). No app, use a tela
+**"Chave do Jev"** pra colar sua chave; sem chave, roda o determinístico. Assinatura de código,
+auto-update e outros sistemas operacionais ficam pra próximas fases.
 
 ## Como ele decide (os 3 sinais)
 
