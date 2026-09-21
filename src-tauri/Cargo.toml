@@ -4,10 +4,6 @@ version = "0.1.0"
 description = "TFT-OpenOverlay desktop app"
 edition = "2021"
 
-[lib]
-name = "tft_openoverlay_lib"
-crate-type = ["staticlib", "cdylib", "rlib"]
-
 [[bin]]
 name = "tft-openoverlay"
 path = "src/main.rs"
