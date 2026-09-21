@@ -29,9 +29,43 @@ body {
 
 .app { max-width: 1100px; margin: 0 auto; padding: 28px 20px 60px; }
 
+.app__header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.app__header-text { min-width: 0; }
 .app__header h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: 0.3px; }
 .app__header h1 .dot { color: var(--accent); }
 .app__header p { margin: 0; color: var(--muted); }
+
+/* ---- configuração da chave do Jev ---- */
+.jev-settings {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px;
+  min-width: 260px;
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.jev-settings__head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.jev-settings__title { font-size: 14px; font-weight: 700; }
+.jev-settings__status { font-size: 11px; font-weight: 700; border-radius: 20px; padding: 2px 8px; }
+.jev-settings__status--on { background: #0f2a1c; color: #b9f6cf; border: 1px solid #1c5237; }
+.jev-settings__status--off { background: #2a1c14; color: #f0c8a8; border: 1px solid #52371c; }
+.jev-settings__hint { margin: 0; color: var(--muted); font-size: 12px; }
+.jev-settings__row { display: flex; gap: 6px; }
+.jev-settings__input {
+  flex: 1; min-width: 0;
+  background: var(--panel-2); border: 1px solid var(--line); color: var(--text);
+  border-radius: 8px; padding: 7px 10px; font-size: 13px;
+}
+.jev-settings__input:focus { outline: none; border-color: var(--accent); }
+.jev-settings__save {
+  background: var(--accent); color: #04211d; border: none; border-radius: 8px;
+  padding: 7px 12px; font-size: 13px; font-weight: 700; cursor: pointer;
+}
+.jev-settings__save:hover { filter: brightness(1.08); }
+.jev-settings__save:disabled { opacity: 0.5; cursor: default; }
 
 .layout {
   display: grid;

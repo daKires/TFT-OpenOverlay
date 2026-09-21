@@ -6,6 +6,10 @@ import type { Champion, CompSuggestion, HeldState } from '../core/index';
 const JEV_ENDPOINT = '/api/jev';
 const JEV_MODEL = 'jev-latest';
 
+// No browser (npm run dev) o Vite faz proxy de /api/jev. No app empacotado NÃO
+// existe esse proxy: o Jev é chamado por um comando Rust via Tauri invoke.
+const isTauri = typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window;
+
 // ---------------------------------------------------------------------------
 // Questions enviadas ao Jev
 // ---------------------------------------------------------------------------
@@ -133,6 +137,42 @@ export function buildAnalysisState(
 }
 
 /**
+ * Transporte do corpo da requisição até o Jev. No app empacotado (Tauri) o
+ * comando Rust `jev_analyze` faz a chamada; no browser mantemos o fetch para
+ * `/api/jev` (proxy do Vite). Devolve o JSON cru ou null em qualquer falha.
+ */
+async function sendJev(body: JevRequest): Promise<unknown> {
+  if (isTauri) {
+    try {
+      // Import dinâmico: só no ramo Tauri, pra não quebrar o build do browser
+      // nem os testes (que rodam em node, isTauri = false).
+      const { invoke } = await import('@tauri-apps/api/core');
+      return await invoke('jev_analyze', { body: JSON.stringify(body) });
+    } catch {
+      return null;
+    }
+  }
+
+  let res: Response;
+  try {
+    res = await fetch(JEV_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    });
+  } catch {
+    return null;
+  }
+  if (!res.ok) return null;
+
+  try {
+    return await res.json();
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Pede ao Jev que escolha a comp e a confiança de commit. Em qualquer falha
  * (rede, resposta não-ok, payload inválido ou escolha fora dos candidatos)
  * devolve null — sinal para o chamador cair no top-1 determinístico.
@@ -158,24 +198,8 @@ export async function analyze({ held, economy, candidates, champions }: AnalyzeP
     },
   };
 
-  let res: Response;
-  try {
-    res = await fetch(JEV_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
-    });
-  } catch {
-    return null;
-  }
-  if (!res.ok) return null;
-
-  let raw: unknown;
-  try {
-    raw = await res.json();
-  } catch {
-    return null;
-  }
+  const raw = await sendJev(body);
+  if (raw === null) return null;
 
   const answers = extractAnswers(raw);
   const whichComp = answers.which_comp as JevQuestionAnswer | undefined;
