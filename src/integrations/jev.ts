@@ -1,4 +1,4 @@
-import type { CompSuggestion, HeldState } from '../core/index';
+import type { Champion, CompSuggestion, HeldState } from '../core/index';
 
 // Integração com o Jev (TypeSafe AI). Fica FORA de src/core: o núcleo é puro e
 // não sabe da existência disto. Só importamos TIPOS do core.
@@ -70,6 +70,8 @@ export interface AnalyzeParams {
   held: HeldState;
   economy: JevEconomy;
   candidates: CompSuggestion[];
+  /** Catálogo de campeões (do core) usado pra enriquecer nomes/traits no state. */
+  champions?: Champion[];
 }
 
 export interface JevDecision {
@@ -81,17 +83,24 @@ export interface JevDecision {
 /**
  * Serializa em JSON legível o contexto que o Jev recebe: o tabuleiro (unidades
  * e peças), a economia e os candidatos gerados pelo core (determinístico).
+ * Nomes/traits vêm do catálogo `champions` (fallback no próprio id).
  */
 export function buildAnalysisState(
   held: HeldState,
   economy: JevEconomy,
   candidates: CompSuggestion[],
+  champions: Champion[] = [],
 ): string {
+  const byId = new Map(champions.map((c) => [c.id, c]));
+  const nameOf = (id: string): string => byId.get(id)?.name ?? id;
+
   const state = {
     board: {
       units: held.units.map((u) => ({
         championId: u.championId,
         location: u.location ?? 'board',
+        name: nameOf(u.championId),
+        traits: byId.get(u.championId)?.traits ?? [],
         star: u.star ?? 1,
       })),
       components: [...held.components],
@@ -112,6 +121,12 @@ export function buildAnalysisState(
         unitOverlap: s.breakdown.unitOverlap,
         itemBuildability: s.breakdown.itemBuildability,
       },
+      fit: s.breakdown.fit,
+      units: s.comp.units.map((u) => ({
+        name: nameOf(u.championId),
+        role: u.role,
+        held: s.why.matchedUnits.includes(u.championId),
+      })),
     })),
   };
   return JSON.stringify(state, null, 2);
@@ -122,12 +137,12 @@ export function buildAnalysisState(
  * (rede, resposta não-ok, payload inválido ou escolha fora dos candidatos)
  * devolve null — sinal para o chamador cair no top-1 determinístico.
  */
-export async function analyze({ held, economy, candidates }: AnalyzeParams): Promise<JevDecision | null> {
+export async function analyze({ held, economy, candidates, champions }: AnalyzeParams): Promise<JevDecision | null> {
   if (candidates.length === 0) return null;
 
   const body: JevRequest = {
     model: JEV_MODEL,
-    state: buildAnalysisState(held, economy, candidates),
+    state: buildAnalysisState(held, economy, candidates, champions),
     questions: {
       which_comp: {
         type: 'choice',

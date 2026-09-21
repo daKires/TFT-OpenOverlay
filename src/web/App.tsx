@@ -82,6 +82,7 @@ export function App() {
               candidates={candidates}
               held={held}
               economy={economy}
+              champions={data.champions}
               championName={data.championName}
             />
           )}

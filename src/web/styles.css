@@ -204,8 +204,11 @@ body {
 .analysis { display: flex; flex-direction: column; gap: 10px; }
 .analysis__head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
 .analysis__head h2 { margin: 0; font-size: 18px; }
+.analysis__status { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .analysis__loading { color: var(--muted); font-size: 13px; }
+.analysis__updating { color: var(--muted); font-size: 12px; opacity: 0.8; }
 .analysis__note { color: var(--muted); font-size: 12px; }
+.analysis__note--warn { color: var(--warn); }
 .analysis__pick > .card {
   border-color: var(--accent);
   box-shadow: 0 0 0 1px var(--accent) inset, 0 10px 30px -18px var(--accent);
