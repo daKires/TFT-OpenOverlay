@@ -8,9 +8,16 @@ computacional, **não** é overlay, **não** depende de como o estado do jogo é
 objeto simples (`HeldState`); hoje uma telinha monta esse objeto na mão, amanhã ele pode vir de
 visão computacional, do Overwolf ou da API da Riot — **sem mudar o cérebro**.
 
+> **É um app LOCAL. Não existe site hospedado nem deploy.** Você clona o repositório, roda
+> `npm install` e `npm run dev` na sua própria máquina. Tudo roda localmente; a única coisa que
+> pode usar rede é o importador (`npm run import`) e o **Jev**, que é **opcional** e roda no seu
+> servidor local.
+
 ## Como rodar
 
 ```bash
+git clone <url-do-repo>
+cd TFT-OpenOverlay
 npm install
 
 # 1) Abrir a telinha de teste (UI) no navegador:
@@ -24,9 +31,37 @@ npm run typecheck    # confere os tipos
 npm run build        # build de produção da UI
 ```
 
+> Este é um **app local**: não há ambiente online. Todo o fluxo é `clone` + `npm install` +
+> `npm run dev` na sua máquina.
+
 Na UI: escolha as **unidades** que você tem (busca + clique) e clique nas **peças** (componentes)
 que você tem na bancada — pode repetir a mesma peça (ex. 2× B.F. Sword). O **Top 3** atualiza na
 hora, com o motivo de cada uma.
+
+## Jev (opcional)
+
+O app tem integração com o **Jev** (TypeSafe AI), mas ela é **totalmente opcional** e roda **LOCAL**:
+
+- Para usar, você precisa da **SUA própria chave** da TypeSafe, colocada num arquivo `.env` **na raiz
+  do projeto**:
+
+  ```bash
+  JEV_API_KEY=sua_chave_aqui
+  ```
+
+  (veja o modelo em [`.env.example`](.env.example)).
+
+- Com a chave configurada, a análise por Jev roda através do **proxy do Vite**, que lê a chave
+  **apenas no servidor local**. A chave **nunca vai pro bundle** do navegador.
+- **Sem chave, o app cai automaticamente no suggester determinístico** e funciona normalmente — você
+  não precisa de chave nenhuma pra usar o app.
+
+## Instalador desktop (Tauri) — próximo passo
+
+O alvo do projeto é poder ser empacotado como um **app desktop instalável** via
+[Tauri](https://tauri.app/) (ex. um `.exe`/`.app`/`.AppImage` em vez de abrir no navegador). Isso é um
+**próximo passo**: **ainda não está implementado**. Por enquanto, o uso é o app local rodando com
+`npm run dev` (ou o build servido localmente).
 
 ## Como ele decide (os 3 sinais)
 
@@ -114,3 +149,8 @@ fictícias** — servem pra exercitar o scorer. As 8 receitas "dobradas" (ex. B.
 Deathblade) são estáveis; os cruzamentos usam nomes clássicos. O ponto de entrada de dados é o
 `loadData()` (em `src/core/data`), que usa os dados reais do `set18.json` quando existem e cai nos de
 exemplo quando não — a UI e os testes consomem daí sem saber a origem.
+
+## Licença
+
+Este projeto é distribuído sob a licença **MIT**. Veja o arquivo [LICENSE](LICENSE) para o texto
+completo.
