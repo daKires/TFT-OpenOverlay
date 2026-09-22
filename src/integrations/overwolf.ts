@@ -268,7 +268,8 @@ export function subscribeOverwolfState(
   const onInfoUpdate = (update: unknown) => emit(field(update, 'info'));
 
   const events = overwolf.games.events;
-  events.getInfo((info) => emit(info)); // snapshot inicial (uma vez)
+  // getInfo devolve { status, res: {...} }; o info fica em `res`.
+  events.getInfo((data) => emit(field(data, 'res') ?? data)); // snapshot inicial (uma vez)
   events.onInfoUpdates2.addListener(onInfoUpdate);
 
   return () => {
