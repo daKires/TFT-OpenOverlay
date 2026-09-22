@@ -15,7 +15,8 @@
     "diagnose": "tsx scripts/import/diagnose.ts",
     "tauri": "tauri",
     "tauri:dev": "tauri dev",
-    "tauri:build": "tauri build"
+    "tauri:build": "tauri build",
+    "overwolf:build": "vite build && node scripts/copy-overwolf.mjs"
   },
   "dependencies": {
     "@tauri-apps/api": "^2",

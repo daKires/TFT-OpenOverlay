@@ -1,0 +1,50 @@
+{
+  "manifest_version": 1,
+  "type": "WebApp",
+  "meta": {
+    "name": "TFT-OpenOverlay",
+    "author": "TFT-OpenOverlay",
+    "version": "0.1.0",
+    "minimum-overwolf-version": "0.200.0",
+    "description": "Overlay in-game que lê o estado do TFT ao vivo (Overwolf GEP) e sugere comps do meta. MVP: unidades + economia (sem Jev).",
+    "icon": "icon.png",
+    "icon_gray": "icon.png",
+    "dock_button_title": "TFT-OpenOverlay"
+  },
+  "permissions": ["GameInfo"],
+  "data": {
+    "start_window": "background",
+    "windows": {
+      "background": {
+        "file": "background.html",
+        "is_background_page": true
+      },
+      "overlay": {
+        "file": "index.html",
+        "transparent": true,
+        "resizable": true,
+        "show_in_taskbar": false,
+        "override_on_update": true,
+        "in_game": {
+          "dimensions": {
+            "width": 1100,
+            "height": 800
+          }
+        },
+        "focus_game_takeover": "ReleasedOnLostFocus"
+      }
+    },
+    "game_targeting": {
+      "type": "dedicated",
+      "game_ids": [21570]
+    },
+    "game_events": [21570],
+    "hotkeys": {
+      "tft_overlay_toggle": {
+        "title": "Mostrar/esconder overlay",
+        "action-type": "toggle",
+        "default": "Ctrl+Shift+T"
+      }
+    }
+  }
+}

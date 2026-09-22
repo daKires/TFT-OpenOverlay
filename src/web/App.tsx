@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import {
   suggestComps,
   loadData,
@@ -14,6 +14,7 @@ import { AnalysisPanel } from './components/AnalysisPanel';
 import { BoardContext, type Economy } from './components/BoardContext';
 import { JevSettings } from './components/JevSettings';
 import { usePersistentState } from './usePersistentState';
+import { isOverwolf, subscribeOverwolfState } from '../integrations/overwolf';
 
 // A UI é só um ADAPTADOR: monta um HeldState e chama o cérebro. Os dados vêm do
 // loadData() — reais do set quando o importador rodou, senão os de exemplo.
@@ -24,6 +25,20 @@ export function App() {
   const [unitIds, setUnitIds] = usePersistentState<ChampionId[]>('tft.units', []);
   const [counts, setCounts] = usePersistentState<Record<ComponentId, number>>('tft.counts', {});
   const [economy, setEconomy] = usePersistentState<Economy>('tft.economy', {});
+
+  // Camada 2 (Overwolf): só dentro do cliente Overwolf. Assina o GEP e faz
+  // auto-fill das UNIDADES e da ECONOMIA — os pickers continuam visíveis e
+  // editáveis (o próximo update do GEP volta a preencher). No browser normal
+  // isto é no-op (guard isOverwolf), então o fluxo manual/Tauri fica intacto.
+  useEffect(() => {
+    if (!isOverwolf) return;
+    const unsubscribe = subscribeOverwolfState(data.champions, (s) => {
+      // Dedup: a UI trabalha com um conjunto de unidades selecionadas.
+      setUnitIds([...new Set(s.units.map((u) => u.championId))]);
+      setEconomy(s.economy);
+    });
+    return unsubscribe;
+  }, [setUnitIds, setEconomy]);
 
   const units = useMemo(() => new Set(unitIds), [unitIds]);
 
@@ -101,18 +116,24 @@ export function App() {
       </div>
 
       <footer className="app__footer">
-        {data.source === 'set18' ? (
-          <>
-            Dados reais: <strong>{data.setName ?? 'set atual'}</strong>
-            {data.patch && data.patch !== 'latest' ? ` (patch ${data.patch})` : ''} — {data.champions.length} campeões,{' '}
-            {data.comps.length} comps. A lógica é desacoplada da fonte do estado.
-          </>
-        ) : (
-          <>
-            Dados de <strong>exemplo</strong> (fictícios) — rode <code>npm run import</code> pra trazer os dados reais do set
-            atual. A lógica é desacoplada: hoje esta tela monta o estado; amanhã pode vir de visão computacional ou Overwolf.
-          </>
-        )}
+        <p className="app__footer-note">
+          {data.source === 'set18' ? (
+            <>
+              Dados reais: <strong>{data.setName ?? 'set atual'}</strong>
+              {data.patch && data.patch !== 'latest' ? ` (patch ${data.patch})` : ''} — {data.champions.length} campeões,{' '}
+              {data.comps.length} comps. A lógica é desacoplada da fonte do estado.
+            </>
+          ) : (
+            <>
+              Dados de <strong>exemplo</strong> (fictícios) — rode <code>npm run import</code> pra trazer os dados reais do set
+              atual. A lógica é desacoplada: hoje esta tela monta o estado; amanhã pode vir de visão computacional ou Overwolf.
+            </>
+          )}
+        </p>
+        <p className="disclaimer">
+          TFT-OpenOverlay isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone
+          officially involved in producing or managing Riot Games properties.
+        </p>
       </footer>
     </div>
   );
