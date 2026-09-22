@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { isOverwolf } from '../../integrations/overwolf';
 
 // Detecta o runtime Tauri do desktop. No browser este bloco não renderiza nada.
 const isTauri = typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window;
@@ -6,13 +7,14 @@ const isTauri = typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window
 // Telinha de configuração da chave do Jev. A chave é guardada num store local
 // (tauri-plugin-store) pelo backend Rust; aqui só falamos com ele via invoke.
 // Fora do Tauri não há o que configurar, então o componente se auto-esconde.
+// No Overwolf (Camada 2, MVP) o Jev fica FORA — então também se esconde lá.
 export function JevSettings() {
   const [key, setKey] = useState('');
   const [hasKey, setHasKey] = useState<boolean | null>(null);
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
-    if (!isTauri) return;
+    if (!isTauri || isOverwolf) return;
     let cancelled = false;
     import('@tauri-apps/api/core')
       .then(({ invoke }) => invoke<boolean>('has_jev_key'))
@@ -27,7 +29,7 @@ export function JevSettings() {
     };
   }, []);
 
-  if (!isTauri) return null;
+  if (!isTauri || isOverwolf) return null;
 
   async function save() {
     const trimmed = key.trim();

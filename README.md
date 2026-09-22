@@ -76,6 +76,46 @@ O instalador sai em `src-tauri/target/release/bundle/` (`.msi` e `.exe`/NSIS). N
 **"Chave do Jev"** pra colar sua chave; sem chave, roda o determinístico. Assinatura de código,
 auto-update e outros sistemas operacionais ficam pra próximas fases.
 
+## Overwolf (camada 2)
+
+A **camada 2** é um **overlay in-game** que lê o estado do TFT **ao vivo** pelo **Overwolf GEP**
+(Game Events Provider) e alimenta o mesmo cérebro da camada 1 (`suggestComps`), **reusando a UI
+React** de `src/web`. O núcleo (`src/core`) continua puro e não sabe da existência disto: a ponte
+fica em [`src/integrations/overwolf.ts`](src/integrations/overwolf.ts), que só importa **tipos** do
+core.
+
+> **É um MVP.** Mapeamos só **UNIDADES** (board/bench) + **ECONOMIA** (ouro/nível/estágio/HP).
+> Componentes de item soltos, itens/estrelas e o **Jev** ficam **fora** por enquanto.
+
+**Pré-requisitos:** o **cliente Overwolf** instalado e o **Teamfight Tactics** (o `gameId` do TFT no
+Overwolf é **21570**). Não há dependência de runtime nova: a API global `overwolf` é **injetada pelo
+cliente** (tipada por [`src/types/overwolf.d.ts`](src/types/overwolf.d.ts), **não** é pacote npm).
+
+**Build:**
+
+```bash
+npm install
+npm run overwolf:build   # gera dist/ (UI) e copia o pacote Overwolf pra dentro de dist/
+```
+
+O `overwolf:build` roda o `vite build` e, em seguida, `scripts/copy-overwolf.mjs`, que copia
+`manifest.json`, `background.html`, `background.js` e `icon.png` de [`overwolf/`](overwolf/) para
+`dist/`. Assim o `dist/` fica um pacote Overwolf completo.
+
+**Carregar no Overwolf:** abra o Overwolf → **Settings → About → Development options** (ou o
+"Load unpacked extension" no modo desenvolvedor) e aponte para a pasta **`dist/`**. O Overwolf lê o
+`manifest.json` de lá, sobe a página de `background` e declara a janela `overlay` (`index.html`).
+
+**O que o `background` faz:** detecta o TFT rodando (checando `gameId` 21570, via
+`id === 21570` ou `id / 10 === 2157`), assina as features do GEP
+(`['me', 'board', 'bench', 'match_info']`) com **retry** até o GEP ficar pronto, **abre** a janela
+`overlay` quando o TFT está rodando e a **esconde** quando fecha, e registra o **hotkey**
+`Ctrl+Shift+T` ("Mostrar/esconder overlay"). O mapeamento do payload do GEP para o `HeldState` fica
+na UI (`src/integrations/overwolf.ts`), **não** no background.
+
+> O gate de CI roda **só JS** (`npm run typecheck` + `npm test`); o overlay de verdade é validado
+> **manualmente** no cliente Overwolf.
+
 ## Como ele decide (os 3 sinais)
 
 O ranking combina **encaixe × força**, do jeito que os apps de referência (MetaTFT, tactics.tools,
@@ -102,6 +142,8 @@ src/core/           # O CÉREBRO — TypeScript puro, sem UI. É o que vai ser p
   scoring/          # unitOverlap, itemBuildability, metaStrength, suggestComps, explain
   index.ts          # API pública
 src/web/            # A UI — só um ADAPTADOR: monta o HeldState e chama suggestComps
+src/integrations/   # Camada 2: pontes (Overwolf GEP, Jev) que alimentam a UI
+overwolf/           # Pacote Overwolf (manifest + background) — carregado a partir de dist/
 test/               # testes (Vitest) do cérebro
 ```
 
